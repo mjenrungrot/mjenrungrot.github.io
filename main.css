@@ -1,0 +1,17 @@
+.site-header {
+  background-color: #3c4146;
+  border-bottom-color: #200000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header{
+  text-align: center;
+}
+
+body{
+  font-size: 14px;
+  line-height: 1.4;
+  color: #767676;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica;
+}
