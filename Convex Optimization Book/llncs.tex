@@ -83,11 +83,34 @@ Which of the following sets is convex?
     \item The set of points closer to one set than another, i.e., $\{ x \mid \textbf{dist}(x, S) \le \textbf{dist}(x, T)\}$, where $S,T \subseteq \mathbb{R}^n$, and $\textbf{dist}(x,S) = \inf\{\|x - z\|_2 \mid z \in S\}$
 \end{enumerate}
 \end{problem}
-\begin{solution} 
-\newline
+\begin{solution} We have that 
 \begin{enumerate}
-    \item cc
-    \item c2
+    \item Consider the points $x_1, x_2 \in \{x \in \mathbb{R}^n \mid \alpha \le a^\top x \le \beta\}$. We have that
+    \begin{align*}
+    		\alpha \le a^\top x_1 \le \beta  ~~~~\text{and}~~~~ \alpha \le a^\top x_2 \le \beta 
+    \end{align*}
+    Given $\theta \in \mathbb{R}$ such that $0 \le \theta \le 1$, considering the point $x = \theta x_1 + \pn{1 - \theta}x_2$, we have
+    \begin{center}
+    \begin{align*}
+    		\theta\alpha + \pn{1 - \theta}\alpha \le \theta\pn{\alpha^\top x_1} + \pn{1 - \theta}\pn{\alpha^\top x_2} \le \theta\beta + \pn{1 - \theta}\beta \\
+    		\alpha \le \alpha^\top \pn{\theta x_1 + \pn{1-\theta}x_2} \le \beta \\
+    		\alpha \le \alpha^\top x \le \beta 
+			\end{align*}
+    	\end{center}
+    	which indicates that $x \in \{x \in \mathbb{R}^n \mid \alpha \le a^\top x \le \beta\}$. In other words, a slab is convex.
+    \item Consider the points $x_1, x_2 \in \{x \in \mathbb{R}^n \mid \alpha_i \le x_i \le \beta_i, i = 1, \ldots, n\}$. We have that
+			\[
+					\alpha_i \le x_{1,i} \le \beta_i ~~~~\text{and}~~~~ \alpha_i \le x_{2,i} \le \beta_i 
+			\]
+			for all $i \in \{1,2,\ldots,n\}$. Considering a convex combination for $0 \le \theta \le 1$ between $x_1$ and $x_2$, i.e. $y = \theta x_1 + \pn{1-\theta}x_2$, we have
+			\begin{align*}
+				\theta \alpha_i + \pn{1-\theta} \alpha_i \le \theta x_{1,i} + \pn{1-\theta}x_{2,i} \le \theta \beta_i + \pn{1 - \theta}\beta_i \\
+				\alpha_i \le y_i \le \beta_i
+			\end{align*}
+			Hence, $y$ is in the set of a rectangle. Therefore, a rectangle is convex.
+			\item N/A
+			\item N/A
+			\item N/A
 \end{enumerate}
 \end{solution}
 
@@ -141,5 +164,5 @@ N/A
 \addtocmark[2]{Subject Index} % additional numbered TOC entry
 \markboth{Subject Index}{Subject Index}
 \renewcommand{\indexname}{Subject Index}
-\input{subjidx.tex}
+%\input{subjidx.tex}
 \end{document}
