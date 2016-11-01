@@ -1,0 +1,77 @@
+\documentclass[info, crop, draft]{templates/Base}
+\usepackage{framed}
+\usepackage[outerbars]{changebar}
+\usepackage{amsmath}
+
+\input{macros.tex}
+
+\begin{document}
+
+\chapter{Study Guide}
+\section{Linear Regression Models}
+Suppose we have an input vector $\Xb^\top = \pn{X_1, X_2, \ldots, X_p}$ and we
+want to predict a real-valued output $Y$. The linear regression model has the
+form
+\begin{equation}
+    f(X) = \beta_0 + \sum_{j=1}^{p}X_j\beta_j.
+\end{equation}
+Typically we have a set of training data $(x_1, y_1) \ldots (x_N, y_N)$ from which
+we can estimate the parameters $\beta$ by minimizing the error function which we
+will define next. Each $x_i = \pn{x_{i1}, x_{i2}, \ldots, x_{ip}}^\top$ represents
+a vector of feature measurements for the $i$th case. The most popular estimation
+method is \textit{least squares}, in which we pick the coefficients $\beta$ to
+minimize the residual sum of squares
+\begin{gather}
+  \label{eq:rss}
+  \begin{aligned}
+    \text{RSS}(\beta) &= \sum_{i=1}^{N}\pn{y_i - f\pn{x_i}}^2 \\
+    &= \sum_{i=1}^{N}\pn{ y_i - \beta_0 - \sum_{j=1}^{p}x_{ij}\beta_j}^2.
+  \end{aligned}
+\end{gather}
+To minimize (\ref{eq:rss}), we rewrite $\beta$ by appending $\beta_0 = 1$ at its
+first element for convenience. Then, we rewrite the residual sum-of-squares as
+\begin{equation}
+  \text{RSS}(\beta) = \pn{\yy - \Xb \beta}^\top \pn{\yy - \Xb \beta}.
+\end{equation}
+Expanding the above equality, we could obtain
+\begin{gather}
+  \begin{split}
+  \text{RSS}(\beta) &= \yy^\top \yy - \yy^\top \Xb \beta - \beta^\top\Xb^\top \yy
+  + \beta^\top \Xb^\top \Xb \beta \\
+  &= \yy^\top \yy - 2\yy^\top \Xb \beta + \beta^\top \Xb^\top \Xb \beta
+  \end{split}
+\end{gather}
+Differentiating with respect to $\beta$ we obtain
+\begin{gather}
+  \begin{split}
+    \p{\text{RSS}}{\beta} &= -2\yy^\top \Xb + 2\Xb^\top \Xb \beta \\
+    \f{\partial^2 \text{RSS}}{\partial \beta \partial \beta^\top} &= 2\Xb^\top \Xb.
+  \end{split}
+\end{gather}
+Since the Hessian $\Xb^\top \Xb$ is positive definite, we set the first derivative
+to zero
+\begin{gather}
+  \Xb^\top \pn{\yy - \Xb \beta} = 0
+\end{gather}
+to obtain the unique solution
+\begin{gather}
+  \label{eq:beta_linear_regression}
+  \hat{\beta} = \pn{\Xb^\top \Xb}^{-1} \Xb^\top \yy.
+\end{gather}
+The predicted values at an input vector $x_0$ are given by $\hat{f}(x_0) = (1 : x_0)^\top
+\hat{\beta}$; the fitted values at the training inputs are
+\begin{gather}
+  \hat{\yy} = \Xb\hat{\beta} = \Xb(\Xb^\top \Xb)^{-1}\Xb^\top \yy,
+\end{gather}
+where $\hat{y}_i = \hat{f}(x_i)$.
+
+\section{Conditioning Gaussians}
+\section{Ridge Regression / L1 regularized Linear Regression}
+\section{L1/L2 Regularization}
+\section{Multivariate Gaussian}
+\section{Gaussian Discriminant Analysis}
+\section{Exponential Family}
+\section{Solving an Unconstrained Quadratic}
+\section{SVD, Cholesky, Eigen/Spectral Decompositions}
+\section{Generalized Linear Models}
+\end{document}
