@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Main</title>
-  <meta name="description" content="A personal site for keeping interesting things.">
+  <title>Optimization Technique for Deep Learning Model</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://mjenrungrot.github.io/">
+  <link rel="canonical" href="https://mjenrungrot.github.io/deeplearning/2017/08/29/optimization-deeplearning.html">
   <link rel="alternate" type="application/rss+xml" title="Main" href="/feed.xml">
   
   
@@ -67,38 +67,36 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  
-
-
-  <ul class="post-list">
-    
-      <li>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Optimization Technique for Deep Learning Model</h1>
+    <p class="post-meta">
+      <time datetime="2017-08-29T23:39:39-07:00" itemprop="datePublished">
         
-        <span class="post-meta">Aug 29, 2017</span>
+        Aug 29, 2017
+      </time>
+      </p>
+  </header>
 
-        <h2>
-          <a class="post-link" href="/deeplearning/2017/08/29/optimization-deeplearning.html">Optimization Technique for Deep Learning Model</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Aug 23, 2017</span>
+  <div class="post-content" itemprop="articleBody">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-        <h2>
-          <a class="post-link" href="/jekyll/github.io/2017/08/23/starting-jekyll.html">Starting Jekyll</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>In order to train a deep neural network model, the difference between local and global structure actually means a lot. For example, let’s think of a parameter space in <script type="math/tex">\mathbb{R}^n</script> which <script type="math/tex">n</script> is fairly large. It can be very difficult for a gradient-based optimization algorithm to make a step if the cost function at the current point in the parameter space is poorly conditioned.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><a href="https://arxiv.org/pdf/1412.6544.pdf"><em>QUALITATIVELY CHARACTERIZING NEURAL NETWORK OPTIMIZATION PROBLEMS</em></a> argues that most of the runtine of training is due to the length of the trajectory needed to arrive at the solution. This challenge in optimizing the cost function due to global structure can’t be solved fundamentally by simply using good initialization schemes. This introduces us new techniques which are called: <strong>continuation method</strong> and <strong>curriculum learning</strong>.</p>
 
-</div>
+<p>The idea of continuation method and curriculum learning is to create a learning process by first learning simple concepts and then progress to learning more complex concepts that depen on these simple concepts.
+Mathematically, to minimize a cost function <script type="math/tex">J(\mathbf{\theta})</script>, you create new cost functions <script type="math/tex">\{J^{(0)}, \ldots, J^{(n)}\}</script>, with <script type="math/tex">J^{(0)}</script> being the easiest to minimize and <script type="math/tex">J^{(n)}</script> being the hardest to minimize. Here, you can think of easiness to minimize as the cost function that does not have poorly conditioned local structure; for example, a convex cost function would be easy to minimize as it does not have local minimum.</p>
+
+<p><a href="https://ronan.collobert.com/pub/matos/2009_curriculum_icml.pdf">This paper</a> describes the curriculum learning method.
+TO BE CONTINUED..</p>
+
+
+  </div>
+
+  
+</article>
 
       </div>
     </main>
