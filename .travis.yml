@@ -10,18 +10,18 @@ install:
 script:
   - npm test                      # Test 
   - npm run build                 # Build for pre-deploying
-deploy:                           # Deploy to surge
-  provider: surge
-  skip_cleanup: true
-  domain: mjenrungrot.surge.sh
-  project: ./mjenrungrot.github.io/build
-  on:
-    branch: source
-deploy:                           # Deploy to github pages
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  project: ./
-  on:
-    branch: master
+deploy:                           # Deploy to surge [latest branch]
+  - provider: surge
+    skip_cleanup: true
+    domain: mjenrungrot.surge.sh
+    project: ./mjenrungrot.github.io/build
+    on:
+      all_branches: true
+  - provider: pages               # Deploy to Github Pages [only source branch]
+    skip-cleanup: true
+    target-branch: master
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: ./mjenrungrot.github.io/build
+    on:
+      branch: source
