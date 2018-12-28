@@ -20,8 +20,9 @@ script:
 deploy:                           # Deploy to github pages
   provider: pages
   skip-cleanup: true
+  target-branch: master
   github-token: $GITHUB_TOKEN
   keep-history: true
-  project: ./
+  project: ./mjenrungrot.github.io/build
   on:
     branch: deployment_fix
