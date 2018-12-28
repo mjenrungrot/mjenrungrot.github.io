@@ -24,4 +24,4 @@ deploy:                           # Deploy to github pages
   keep-history: true
   project: ./
   on:
-    branch: master
+    branch: deployment_fix
