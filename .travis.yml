@@ -1,11 +1,12 @@
 language: node_js
 node_js:
   - "stable"
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
 script:
   - cd mjenrungrot.github.io      # Move to src folder
+  - pwd
   - npm test                      # Test 
   - npm run build                 # Build for pre-deploying
 deploy:
