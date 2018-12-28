@@ -23,6 +23,6 @@ deploy:                           # Deploy to github pages
   target-branch: master
   github-token: $GITHUB_TOKEN
   keep-history: true
-  project: ./mjenrungrot.github.io/build
+  local-dir: ./mjenrungrot.github.io/build
   on:
     branch: deployment_fix
