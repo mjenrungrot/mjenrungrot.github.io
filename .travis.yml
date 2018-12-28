@@ -1,18 +1,19 @@
 language: node_js
 node_js:
   - "stable"
-# cache:
-#   directories:
-#     - node_modules
+cache:
+  directories:
+    - node_modules
+install:
+  - cd mjenrungrot.github.io
+  - npm install
 script:
-  - cd mjenrungrot.github.io      # Move to src folder
-  - pwd
   - npm test                      # Test 
   - npm run build                 # Build for pre-deploying
 deploy:
   provider: surge
   skip_cleanup: true
   domain: mjenrungrot.surge.sh
-  project: ./mjenrungrot.github.io/build
+  project: ./
 on:
   branch: source
