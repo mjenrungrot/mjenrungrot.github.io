@@ -1,0 +1,22 @@
+{
+  "name": "mjenrungrot.github.io",
+  "homepage": "https://mjenrungrot.github.io",
+  "version": "0.0.0",
+  "description": "mjenrungrot.github.io",
+  "main": "server.js",
+  "author": {
+    "name": "Teerapat Jenrungrot"
+  },
+  "dependencies": {
+    "create-react-app": "^2.1.2",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "ts-loader": "^5.3.2",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
