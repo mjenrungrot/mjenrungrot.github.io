@@ -11,6 +11,6 @@ deploy:
   provider: surge
   skip_cleanup: true
   domain: mjenrungrot.surge.sh
-  project: ./
+  project: ./mjenrungrot.github.io/build
 on:
-  branch: master
+  branch: source
