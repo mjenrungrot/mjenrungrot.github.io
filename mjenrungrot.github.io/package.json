@@ -14,8 +14,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy2": "gh-pages -b master -d build",
-    "deploy": "cd .. && git subtree push --prefix=mjenrungrot.github.io/build origin master"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

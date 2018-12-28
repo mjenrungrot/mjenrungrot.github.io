@@ -5,10 +5,9 @@ cache:
   directories:
     - node_modules
 script:
-  - pwd
-  - ls
-  - npm test
-  - npm run build
+  - cd mjenrungrot.github.io      # Move to src folder
+  - npm test                      # Test 
+  - npm run build                 # Build for pre-deploying
 deploy:
   provider: surge
   skip_cleanup: true
