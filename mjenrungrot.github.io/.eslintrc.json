@@ -1,0 +1,12 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "google",
+        "plugin:flowtype/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "prettier",
+        "flowtype"
+    ]
+}

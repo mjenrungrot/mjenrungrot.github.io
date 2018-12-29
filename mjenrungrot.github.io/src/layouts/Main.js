@@ -45,10 +45,14 @@ class Main extends React.Component {
         </AppBar>
         <Grid container spacing={24}>
           <Grid item xs>
-            <Paper className={classes.paper}>1</Paper>
+            <Paper className={classes.paper}>
+            
+            </Paper>
           </Grid>
           <Grid item xs={9}>
-            <Paper className={classes.paper}>2</Paper>
+            <Paper className={classes.paper}>
+            
+            </Paper>
           </Grid>
         </Grid>
       </div>
