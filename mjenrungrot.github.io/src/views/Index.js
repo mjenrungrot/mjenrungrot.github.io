@@ -1,10 +1,5 @@
-import React from 'react';
+import Main from "../layouts/Main";
 
-import Main from '../layouts/Main';
-
-const Index = () => (
-  <Main>
-  </Main>  
-);
+const Index = () => <Main />;
 
 export default Index;

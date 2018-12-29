@@ -1,12 +1,14 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "google",
-        "plugin:flowtype/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "plugins": [
-        "prettier",
-        "flowtype"
-    ]
+  "parser": "babel-eslint",
+  "extends": [
+    "google",
+    "plugin:flowtype/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier", "flowtype", "react"],
+  "rules": {
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": "off",
+    "react/jsx-uses-vars": ["error"]
+  }
 }
