@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "mjenrungrot.github.io/package.json"
+      ]
+    }
+  }
+}
