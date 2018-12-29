@@ -13,6 +13,6 @@
  * https://github.com/flowtype/flow-typed
  */
 
-declare module 'typeface-roboto' {
+declare module "typeface-roboto" {
   declare module.exports: any;
 }

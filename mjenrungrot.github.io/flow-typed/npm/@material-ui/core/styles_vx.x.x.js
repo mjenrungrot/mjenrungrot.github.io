@@ -13,7 +13,7 @@
  * https://github.com/flowtype/flow-typed
  */
 
-declare module '@material-ui/core/styles' {
+declare module "@material-ui/core/styles" {
   declare module.exports: any;
 }
 
@@ -22,171 +22,171 @@ declare module '@material-ui/core/styles' {
  * require those files directly. Feel free to delete any files that aren't
  * needed.
  */
-declare module '@material-ui/core/styles/colorManipulator' {
+declare module "@material-ui/core/styles/colorManipulator" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createBreakpoints' {
+declare module "@material-ui/core/styles/createBreakpoints" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createGenerateClassName' {
+declare module "@material-ui/core/styles/createGenerateClassName" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createMixins' {
+declare module "@material-ui/core/styles/createMixins" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createMuiTheme' {
+declare module "@material-ui/core/styles/createMuiTheme" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createPalette' {
+declare module "@material-ui/core/styles/createPalette" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createStyles' {
+declare module "@material-ui/core/styles/createStyles" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/createTypography' {
+declare module "@material-ui/core/styles/createTypography" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/getStylesCreator' {
+declare module "@material-ui/core/styles/getStylesCreator" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/getThemeProps' {
+declare module "@material-ui/core/styles/getThemeProps" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/jssPreset' {
+declare module "@material-ui/core/styles/jssPreset" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/mergeClasses' {
+declare module "@material-ui/core/styles/mergeClasses" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/MuiThemeProvider' {
+declare module "@material-ui/core/styles/MuiThemeProvider" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/multiKeyStore' {
+declare module "@material-ui/core/styles/multiKeyStore" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/reactJssContext' {
+declare module "@material-ui/core/styles/reactJssContext" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/shadows' {
+declare module "@material-ui/core/styles/shadows" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/shape' {
+declare module "@material-ui/core/styles/shape" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/spacing' {
+declare module "@material-ui/core/styles/spacing" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/themeListener' {
+declare module "@material-ui/core/styles/themeListener" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/transitions' {
+declare module "@material-ui/core/styles/transitions" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/withStyles' {
+declare module "@material-ui/core/styles/withStyles" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/withTheme' {
+declare module "@material-ui/core/styles/withTheme" {
   declare module.exports: any;
 }
 
-declare module '@material-ui/core/styles/zIndex' {
+declare module "@material-ui/core/styles/zIndex" {
   declare module.exports: any;
 }
 
 // Filename aliases
-declare module '@material-ui/core/styles/colorManipulator.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/colorManipulator'>;
+declare module "@material-ui/core/styles/colorManipulator.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/colorManipulator">;
 }
-declare module '@material-ui/core/styles/createBreakpoints.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createBreakpoints'>;
+declare module "@material-ui/core/styles/createBreakpoints.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createBreakpoints">;
 }
-declare module '@material-ui/core/styles/createGenerateClassName.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createGenerateClassName'>;
+declare module "@material-ui/core/styles/createGenerateClassName.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createGenerateClassName">;
 }
-declare module '@material-ui/core/styles/createMixins.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createMixins'>;
+declare module "@material-ui/core/styles/createMixins.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createMixins">;
 }
-declare module '@material-ui/core/styles/createMuiTheme.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createMuiTheme'>;
+declare module "@material-ui/core/styles/createMuiTheme.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createMuiTheme">;
 }
-declare module '@material-ui/core/styles/createPalette.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createPalette'>;
+declare module "@material-ui/core/styles/createPalette.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createPalette">;
 }
-declare module '@material-ui/core/styles/createStyles.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createStyles'>;
+declare module "@material-ui/core/styles/createStyles.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createStyles">;
 }
-declare module '@material-ui/core/styles/createTypography.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/createTypography'>;
+declare module "@material-ui/core/styles/createTypography.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/createTypography">;
 }
-declare module '@material-ui/core/styles/getStylesCreator.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/getStylesCreator'>;
+declare module "@material-ui/core/styles/getStylesCreator.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/getStylesCreator">;
 }
-declare module '@material-ui/core/styles/getThemeProps.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/getThemeProps'>;
+declare module "@material-ui/core/styles/getThemeProps.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/getThemeProps">;
 }
-declare module '@material-ui/core/styles/index' {
-  declare module.exports: $Exports<'@material-ui/core/styles'>;
+declare module "@material-ui/core/styles/index" {
+  declare module.exports: $Exports<"@material-ui/core/styles">;
 }
-declare module '@material-ui/core/styles/index.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles'>;
+declare module "@material-ui/core/styles/index.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles">;
 }
-declare module '@material-ui/core/styles/jssPreset.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/jssPreset'>;
+declare module "@material-ui/core/styles/jssPreset.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/jssPreset">;
 }
-declare module '@material-ui/core/styles/mergeClasses.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/mergeClasses'>;
+declare module "@material-ui/core/styles/mergeClasses.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/mergeClasses">;
 }
-declare module '@material-ui/core/styles/MuiThemeProvider.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/MuiThemeProvider'>;
+declare module "@material-ui/core/styles/MuiThemeProvider.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/MuiThemeProvider">;
 }
-declare module '@material-ui/core/styles/multiKeyStore.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/multiKeyStore'>;
+declare module "@material-ui/core/styles/multiKeyStore.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/multiKeyStore">;
 }
-declare module '@material-ui/core/styles/reactJssContext.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/reactJssContext'>;
+declare module "@material-ui/core/styles/reactJssContext.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/reactJssContext">;
 }
-declare module '@material-ui/core/styles/shadows.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/shadows'>;
+declare module "@material-ui/core/styles/shadows.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/shadows">;
 }
-declare module '@material-ui/core/styles/shape.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/shape'>;
+declare module "@material-ui/core/styles/shape.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/shape">;
 }
-declare module '@material-ui/core/styles/spacing.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/spacing'>;
+declare module "@material-ui/core/styles/spacing.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/spacing">;
 }
-declare module '@material-ui/core/styles/themeListener.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/themeListener'>;
+declare module "@material-ui/core/styles/themeListener.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/themeListener">;
 }
-declare module '@material-ui/core/styles/transitions.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/transitions'>;
+declare module "@material-ui/core/styles/transitions.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/transitions">;
 }
-declare module '@material-ui/core/styles/withStyles.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/withStyles'>;
+declare module "@material-ui/core/styles/withStyles.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/withStyles">;
 }
-declare module '@material-ui/core/styles/withTheme.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/withTheme'>;
+declare module "@material-ui/core/styles/withTheme.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/withTheme">;
 }
-declare module '@material-ui/core/styles/zIndex.js' {
-  declare module.exports: $Exports<'@material-ui/core/styles/zIndex'>;
+declare module "@material-ui/core/styles/zIndex.js" {
+  declare module.exports: $Exports<"@material-ui/core/styles/zIndex">;
 }
