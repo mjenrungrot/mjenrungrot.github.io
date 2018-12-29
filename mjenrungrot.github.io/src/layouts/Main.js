@@ -49,7 +49,7 @@ class Main extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit" className={classes.grow}>
-              Personal Webpage sadsad
+              Personal Webpage
             </Typography>
             <Button color="inherit">Login</Button>
           </Toolbar>
