@@ -11,7 +11,7 @@ const Info = () => (
       <h2>About</h2>
       <p>Hello, I'm Teerapat Jenrungrot, a senior at Harvey Mudd College.</p>
       <p>
-        To view myCVrrent CV, take a look at <Link to={CV}>Here</Link>
+        To view my current CV, take a look at <Link to={CV}>Here</Link>
       </p>
     </section>
 
