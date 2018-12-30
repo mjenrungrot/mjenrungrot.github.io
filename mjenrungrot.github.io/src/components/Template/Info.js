@@ -2,6 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import CV from "../../data/cv.pdf";
+
 const Info = () => (
   <section id="sidebar">
     <section id="intro">mjenrungrot[at]hmc.edu</section>
@@ -9,8 +11,7 @@ const Info = () => (
       <h2>About</h2>
       <p>Hello, I'm Teerapat Jenrungrot, a senior at Harvey Mudd College.</p>
       <p>
-        To view my current CV, take a look at{" "}
-        <Link to="/data/cv.pdf">Here</Link>
+        To view myCVrrent CV, take a look at <Link to={CV}>Here</Link>
       </p>
     </section>
 
