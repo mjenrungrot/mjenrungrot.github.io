@@ -9,11 +9,11 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Button,
-  Grid,
-  Paper
+  Button
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+
+import Info from "../components/Template/Info";
 
 const styles = theme => ({
   root: {
@@ -38,7 +38,7 @@ class Main extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div id="wrapper">
         <AppBar position="static">
           <Toolbar>
             <IconButton
@@ -54,14 +54,8 @@ class Main extends React.Component {
             <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
-        <Grid container spacing={24}>
-          <Grid item xs>
-            <Paper className={classes.paper} />
-          </Grid>
-          <Grid item xs={9}>
-            <Paper className={classes.paper} />
-          </Grid>
-        </Grid>
+        <div id="main">{this.props.children}</div>
+        <Info />
       </div>
     );
   }
@@ -69,6 +63,10 @@ class Main extends React.Component {
 
 Main.propTypes = {
   classes: PropTypes.object.isRequired
+};
+
+Main.defaultProps = {
+  children: null
 };
 
 export default withStyles(styles)(Main);
