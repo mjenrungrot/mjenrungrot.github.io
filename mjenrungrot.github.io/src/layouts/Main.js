@@ -1,16 +1,10 @@
-/* eslint-disable prettier/prettier */
 // @flow
 
 /* eslint-disable require-jsdoc */
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import {
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton
-} from "@material-ui/core";
+import { Typography, AppBar, Toolbar, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import Info from "../components/Template/Info";
@@ -22,7 +16,7 @@ const styles = theme => ({
     display: "flex"
   },
   appBar: {
-    zIndex: theme.zIndex.drawer + 1,
+    zIndex: theme.zIndex.drawer + 1
   },
   menuButton: {
     marginLeft: -12,
@@ -30,14 +24,14 @@ const styles = theme => ({
   },
   canvas: {
     flexGrow: 1,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing.unit * 3
   },
   leftPanel: {
     flexShrink: 0,
     width: leftPanelWidth,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing.unit * 3
   },
-  toolbar: theme.mixins.toolbar,
+  toolbar: theme.mixins.toolbar
 });
 
 class Main extends React.Component {
@@ -63,7 +57,7 @@ class Main extends React.Component {
         <div className={classes.leftPanel}>
           <div className={classes.toolbar} />
           <Info />
-          </div>
+        </div>
         <main className={classes.canvas}>
           <div className={classes.toolbar} />
           {this.props.children}

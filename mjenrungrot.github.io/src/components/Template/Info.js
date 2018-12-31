@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
+// $FlowFixMe
 import CV from "../../data/cv.pdf";
 
 const styles = theme => ({
