@@ -28,7 +28,7 @@ const theme = createMuiTheme({
   }
 });
 
-document.title = "Personal Webpage -- Teerapat Jenrungrot";
+document.title = "Teerapat Jenrungrot";
 document.body.style.margin = "0";
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
