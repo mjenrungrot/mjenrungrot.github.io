@@ -4,33 +4,34 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import {
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Button
-} from "@material-ui/core";
+import { Typography, AppBar, Toolbar, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import Info from "../components/Template/Info";
 
+const leftPanelWidth = 500;
+
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    display: "flex"
   },
-  grow: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: "center",
-    color: theme.palette.text.secondary
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1
   },
   menuButton: {
     marginLeft: -12,
     marginRight: 20
-  }
+  },
+  canvas: {
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3
+  },
+  leftPanel: {
+    flexShrink: 0,
+    width: leftPanelWidth,
+    padding: theme.spacing.unit * 3
+  },
+  toolbar: theme.mixins.toolbar
 });
 
 class Main extends React.Component {
@@ -38,8 +39,8 @@ class Main extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div id="wrapper">
-        <AppBar position="static">
+      <div className={classes.root}>
+        <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <IconButton
               className={classes.menuButton}
@@ -48,14 +49,19 @@ class Main extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
+            <Typography variant="h6" color="inherit">
               Personal Webpage
             </Typography>
-            <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
-        <div id="main">{this.props.children}</div>
-        <Info />
+        <div className={classes.leftPanel}>
+          <div className={classes.toolbar} />
+          <Info />
+        </div>
+        <main className={classes.canvas}>
+          <div className={classes.toolbar} />
+          {this.props.children}
+        </main>
       </div>
     );
   }
