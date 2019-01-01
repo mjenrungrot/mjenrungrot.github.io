@@ -5,8 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
+import { Paper, Divider, Typography } from "@material-ui/core";
 
 // $FlowFixMe
 import CV from "../../data/cv.pdf";
@@ -29,13 +28,14 @@ function Info(props) {
   return (
     <div>
       <Paper className={classes.root} elevation={1}>
-        <Typography variant="h5" component="h3">
+        <Typography variant="h5" component="h3" gutterBottom>
           About
         </Typography>
-        <Typography component="p">
+        <Divider />
+        <Typography component="p" gutterBottom>
           Hello, I'm Teerapat Jenrungrot, a senior at Harvey Mudd College.
         </Typography>
-        <Typography component="p">
+        <Typography component="p" gutterBottom>
           To view my current CV, take a look at{" "}
           <Link to={CV} target="_self">
             here
