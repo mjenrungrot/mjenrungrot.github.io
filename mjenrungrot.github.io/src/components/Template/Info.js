@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import { Paper, Divider, Typography } from "@material-ui/core";
-import { SocialIcon } from "react-social-icons";
 
 // $FlowFixMe
 import CV from "../../data/cv.pdf";
@@ -42,23 +41,6 @@ function Info(props) {
             here
           </Link>
         </Typography>
-        <SocialIcon
-          url="https://linkedin.com/in/mjenrungrot"
-          style={{ width: 30, height: 30 }}
-          fgColor="white"
-          bgColor="gray"
-        />
-        <SocialIcon
-          url="https://github.com/mjenrungrot/"
-          style={{ width: 30, height: 30 }}
-          fgColor="white"
-          bgColor="gray"
-        />
-        <SocialIcon
-          url="mailto:mjenrungrot[at]g.hmc.edu"
-          network="email"
-          style={{ width: 30, height: 30 }}
-        />
       </Paper>
     </div>
   );
