@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
-const webpack = require("webpack");
 const path = require("path");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-module.exports = defaults => ({
-  ...defaults,
-  mode: "development",
+module.exports = {
   entry: "./src/entry.js",
   output: {
-    path: __dirname + "/build",
-    filename: "[name].[hash].js"
+    path: path.resolve(__dirname, "build"),
+    filename: "[name].bundle.js"
   },
   module: {
     rules: [
@@ -72,9 +70,10 @@ module.exports = defaults => ({
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(["build"]),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     })
   ]
-});
+};

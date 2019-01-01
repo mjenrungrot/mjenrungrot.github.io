@@ -20,8 +20,8 @@
     "lint": "eslint src/**/*.js",
     "format": "npm run lint -- --fix",
     "check-all": "npm run lint && npm run flow",
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack -p",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -b master -d build"
@@ -57,6 +57,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.6.0",
     "eslint-config-google": "^0.11.0",
@@ -76,6 +77,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.5"
   }
 }

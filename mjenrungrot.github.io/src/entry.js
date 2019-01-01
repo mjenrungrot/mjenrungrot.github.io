@@ -7,6 +7,10 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 // Pages
 import Index from "./views/Index";
 
+if (process.env.NODE_ENV !== "production") {
+  console.log("Looks like we are in development mode!");
+}
+
 // Material-UI Theme
 const theme = createMuiTheme({
   palette: {
