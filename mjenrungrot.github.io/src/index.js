@@ -2,12 +2,22 @@
 
 import React from "react"; //eslint-disable-line
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  withRouter,
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 import "typeface-roboto";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 // Pages
 import Index from "./views/Index";
+import Works from "./views/Works";
+import Publications from "./views/Publications";
+import Projects from "./views/Projects";
+import Others from "./views/Others";
+import Experimental from "./views/Experimental";
 
 // Material-UI Theme
 const theme = createMuiTheme({
@@ -48,7 +58,12 @@ class App extends React.Component {
       <MuiThemeProvider theme={theme}>
         <Router>
           <Switch>
-            <Route path="/" component={Index} />
+            <Route exact path="/" component={Index} />
+            <Route path="/works" component={Works} />
+            <Route path="/publications" component={Publications} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/others" component={Others} />
+            <Route path="/experimental" component={Experimental} />
           </Switch>
         </Router>
       </MuiThemeProvider>
@@ -56,6 +71,6 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);
 
 ReactDOM.render(<App />, document.getElementById("root"));
