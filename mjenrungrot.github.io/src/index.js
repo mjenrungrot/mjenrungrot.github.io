@@ -1,3 +1,5 @@
+// @flow
+
 import React from "react"; //eslint-disable-line
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -26,18 +28,34 @@ const theme = createMuiTheme({
   }
 });
 
-document.title = "Teerapat Jenrungrot";
-document.body.style.margin = "0";
+/**
+ * Main App component
+ */
+class App extends React.Component {
+  /**
+   * componentDidMount
+   */
+  componentDidMount() {
+    document.title = "Teerapat Jenrungrot";
+  }
 
-const App = () => (
-  <MuiThemeProvider theme={theme}>
-    <Router>
-      <Switch>
-        <Route path="/" component={Index} />
-      </Switch>
-    </Router>
-  </MuiThemeProvider>
-);
+  /**
+   * render
+   * @return {Component} App Component.
+   */
+  render() {
+    return (
+      <MuiThemeProvider theme={theme}>
+        <Router>
+          <Switch>
+            <Route path="/" component={Index} />
+          </Switch>
+        </Router>
+      </MuiThemeProvider>
+    );
+  }
+}
+
 export default App;
 
 ReactDOM.render(<App />, document.getElementById("root"));
