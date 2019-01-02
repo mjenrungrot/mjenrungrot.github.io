@@ -30,8 +30,12 @@ function Experimental(props) {
   return (
     <Main>
       <Paper className={classes.root}>
-        <Typography variant="h5" component="h3">
-          Publications
+        <Typography variant="h5" component="h3" gutterBottom>
+          Experimental
+        </Typography>
+        <Typography component="p" gutterBottom>
+          This component is an experimental section. It's used for developing
+          purposes only.
         </Typography>
       </Paper>
     </Main>

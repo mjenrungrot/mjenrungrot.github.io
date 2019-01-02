@@ -30,16 +30,16 @@ function Index(props) {
   return (
     <Main>
       <Paper className={classes.root}>
-        <Typography variant="h5" component="h3">
+        <Typography variant="h5" component="h3" gutterBottom>
           About this site
         </Typography>
-        <Typography component="p">
+        <Typography component="p" gutterBottom>
           A beatuful, responsive, react app written with ES2016, material-ui.
         </Typography>
-        <Typography component="p">
+        <Typography component="p" gutterBottom>
           Welcome to my website. Please feel free to read more about me.
         </Typography>
-        <Typography component="p">
+        <Typography component="p" gutterBottom>
           Source available at{" "}
           <a href="https://github.com/mjenrungrot/mjenrungrot.github.io">
             Here
