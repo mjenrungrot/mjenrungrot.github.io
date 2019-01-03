@@ -17,7 +17,11 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import BusinessIcon from "@material-ui/icons/Business";
+import SchoolIcon from "@material-ui/icons/School";
+import PublicIcon from "@material-ui/icons/Public";
+import NotesIcon from "@material-ui/icons/Notes";
+import BuildIcon from "@material-ui/icons/Build";
 
 import Info from "../components/Template/Info";
 
@@ -57,27 +61,27 @@ const drawerConfig = [
   },
   {
     text: "Work Experiences",
-    icon: <MailIcon />,
+    icon: <BusinessIcon />,
     linkto: "/works"
   },
   {
     text: "Publications",
-    icon: <InboxIcon />,
+    icon: <SchoolIcon />,
     linkto: "/publications"
   },
   {
     text: "Projects",
-    icon: <InboxIcon />,
+    icon: <PublicIcon />,
     linkto: "/projects"
   },
   {
     text: "Others",
-    icon: <InboxIcon />,
+    icon: <NotesIcon />,
     linkto: "/others"
   },
   {
     text: "Experimental Section",
-    icon: <InboxIcon />,
+    icon: <BuildIcon />,
     linkto: "/experimental"
   }
 ];
