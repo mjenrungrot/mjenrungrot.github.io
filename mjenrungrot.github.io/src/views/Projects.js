@@ -7,7 +7,6 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
 import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
 import Main from "../layouts/Main";
@@ -26,14 +25,9 @@ const styles = theme => ({
  * @return {object} Projects component
  */
 function Projects(props) {
-  const { classes } = props;
   return (
     <Main>
-      <Paper className={classes.root}>
-        <Typography variant="h5" component="h3">
-          Projects
-        </Typography>
-      </Paper>
+      <Typography variant="h3">Projects</Typography>
     </Main>
   );
 }

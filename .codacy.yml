@@ -1,0 +1,4 @@
+exclude_paths:
+  - mjenrungrot.github.io/flow-typed/**/*
+  - "*.md"
+  - package-lock.json
