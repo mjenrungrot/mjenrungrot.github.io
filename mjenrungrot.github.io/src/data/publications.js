@@ -7,10 +7,10 @@ const data = [
     venue: null,
     status: "Preprint",
     link: null,
-    image: "",
+    image: null,
     date: "December 2018",
-    pdf: "",
-    code: "",
+    pdf: "data/publications/AudioSheetSync_final.pdf",
+    code: "https://github.com/mjenrungrot/salience_sheet_following",
     desc:
       "Audio–sheet music alignment is the task of finding correspondences between time " +
       "instants in an audio recording and corresponding pixel locations in sheet music images. " +
@@ -37,10 +37,10 @@ const data = [
       "IEEE International Conference on Acoustic, Speech, and Signal Processsing (ICASSP) 2019",
     status: "Submitted",
     link: null,
-    image: "",
+    image: null,
     date: "November 2018",
-    pdf: "",
-    code: "",
+    pdf: "data/publications/SheetMidiSync_submitted.pdf",
+    code: null,
     desc:
       "MIDI–sheet music alignment is the task of finding correspondences " +
       "between a MIDI representation of a piece and its corresponding sheet " +
@@ -58,16 +58,6 @@ const data = [
       "IMSLP and corresponding MIDI performances, our method achieves " +
       "a 97.3% accuracy at an error tolerance of one second, outperforming " +
       "several baseline systems that employ optical music recognition."
-  },
-  {
-    title: "aaa",
-    authors: ["aaaa bbbb", "cccc dddd"],
-    link: "ccc",
-    image: "",
-    date: "2015-11-20",
-    pdf: "",
-    code: "",
-    desc: "aaaaaaaaaaaa" + "dsfdfadfadasdasdsad " + " sdfdfsfkdsfjdslfjskdlfj. "
   }
 ];
 
