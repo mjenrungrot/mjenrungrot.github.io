@@ -21,38 +21,26 @@ const styles = theme => ({
 });
 
 /**
- * Index View Component
+ * Works View Component
  * @param {object} props creation params
- * @return {object} Index component
+ * @return {object} Works component
  */
-function Index(props) {
+function Works(props) {
+  console.log("Call works properly");
   const { classes } = props;
   return (
     <Main>
       <Paper className={classes.root}>
-        <Typography variant="h5" component="h3" gutterBottom>
-          About this site
-        </Typography>
-        <Typography component="p" gutterBottom>
-          A beatuful, responsive, react app written with ES2016, material-ui.
-        </Typography>
-        <Typography component="p" gutterBottom>
-          Welcome to my website. Please feel free to read more about me.
-        </Typography>
-        <Typography component="p" gutterBottom>
-          Source available at{" "}
-          <a href="https://github.com/mjenrungrot/mjenrungrot.github.io">
-            Here
-          </a>
-          .
+        <Typography variant="h5" component="h3">
+          Works
         </Typography>
       </Paper>
     </Main>
   );
 }
 
-Index.propTypes = {
+Works.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Index);
+export default withStyles(styles)(Works);

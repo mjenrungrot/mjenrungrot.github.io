@@ -21,38 +21,29 @@ const styles = theme => ({
 });
 
 /**
- * Index View Component
+ * Experimental View Component
  * @param {object} props creation params
- * @return {object} Index component
+ * @return {object} Experimental component
  */
-function Index(props) {
+function Experimental(props) {
   const { classes } = props;
   return (
     <Main>
       <Paper className={classes.root}>
         <Typography variant="h5" component="h3" gutterBottom>
-          About this site
+          Experimental
         </Typography>
         <Typography component="p" gutterBottom>
-          A beatuful, responsive, react app written with ES2016, material-ui.
-        </Typography>
-        <Typography component="p" gutterBottom>
-          Welcome to my website. Please feel free to read more about me.
-        </Typography>
-        <Typography component="p" gutterBottom>
-          Source available at{" "}
-          <a href="https://github.com/mjenrungrot/mjenrungrot.github.io">
-            Here
-          </a>
-          .
+          This component is an experimental section. It's used for developing
+          purposes only.
         </Typography>
       </Paper>
     </Main>
   );
 }
 
-Index.propTypes = {
+Experimental.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Index);
+export default withStyles(styles)(Experimental);
