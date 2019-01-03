@@ -49,6 +49,39 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar
 });
 
+const drawerConfig = [
+  {
+    text: "Main",
+    icon: <InboxIcon />,
+    linkto: "/"
+  },
+  {
+    text: "Work Experiences",
+    icon: <MailIcon />,
+    linkto: "/works"
+  },
+  {
+    text: "Publications",
+    icon: <InboxIcon />,
+    linkto: "/publications"
+  },
+  {
+    text: "Projects",
+    icon: <InboxIcon />,
+    linkto: "/projects"
+  },
+  {
+    text: "Others",
+    icon: <InboxIcon />,
+    linkto: "/others"
+  },
+  {
+    text: "Experimental Section",
+    icon: <InboxIcon />,
+    linkto: "/experimental"
+  }
+];
+
 /**
  * Main component
  */
@@ -70,7 +103,6 @@ class Main extends React.Component {
    * @return {state} output state
    */
   toggleDrawer(open) {
-    console.log("call ", open);
     return () => {
       this.setState({
         ...this.state,
@@ -86,49 +118,21 @@ class Main extends React.Component {
   render() {
     const { classes } = this.props;
 
-    // eslint-disable-next-line no-unused-vars
     const sideList = (
       <div className={classes.list}>
         <List>
-          {[
-            {
-              text: "Main",
-              icon: <InboxIcon />,
-              linkto: "/"
-            },
-            {
-              text: "Work Experiences",
-              icon: <MailIcon />,
-              linkto: "/works"
-            },
-            {
-              text: "Publications",
-              icon: <InboxIcon />,
-              linkto: "/publications"
-            },
-            {
-              text: "Projects",
-              icon: <InboxIcon />,
-              linkto: "/projects"
-            },
-            {
-              text: "Others",
-              icon: <InboxIcon />,
-              linkto: "/others"
-            },
-            {
-              text: "Experimental Section",
-              icon: <InboxIcon />,
-              linkto: "/experimental"
-            }
-          ].map((tuple, _) => (
-            <Link to={tuple.linkto}>
-              <ListItem button key={tuple.text}>
-                <ListItemIcon>{tuple.icon}</ListItemIcon>
-                <ListItemText primary={tuple.text} />
-              </ListItem>
-            </Link>
-          ))}
+          {drawerConfig.map((tuple, _) => {
+            return (
+              <div key={tuple.text}>
+                <Link to={tuple.linkto}>
+                  <ListItem button key={tuple.text}>
+                    <ListItemIcon>{tuple.icon}</ListItemIcon>
+                    <ListItemText primary={tuple.text} />
+                  </ListItem>
+                </Link>
+              </div>
+            );
+          })}
         </List>
       </div>
     );
