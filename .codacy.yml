@@ -1,0 +1,3 @@
+exclude_paths:
+  - mjenrungrot.github.io/flow-typed/**/*
+  - "*.md"
