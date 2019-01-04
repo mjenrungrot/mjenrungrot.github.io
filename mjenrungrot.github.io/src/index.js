@@ -64,6 +64,7 @@ class App extends React.Component {
             <Route path="/projects" component={Projects} />
             <Route path="/others" component={Others} />
             <Route path="/experimental" component={Experimental} />
+            <Route component={Index} />
           </Switch>
         </Router>
       </MuiThemeProvider>

@@ -7,7 +7,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].bundle.js"
+    filename: "[name].bundle.js",
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -55,7 +56,14 @@ module.exports = {
       // PDF + images
       {
         test: /\.(pdf|gif|png|jpe?g|svg)$/,
-        use: "file-loader?name=[path][name].[ext]"
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]"
+            }
+          }
+        ]
       },
       // HTML
       {
@@ -63,7 +71,10 @@ module.exports = {
         use: [
           {
             loader: "html-loader",
-            options: { minimize: true }
+            options: {
+              minimize: true,
+              outputPath: "./"
+            }
           }
         ]
       }
@@ -74,6 +85,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/404.html",
+      filename: "./404.html"
     })
   ]
 };
