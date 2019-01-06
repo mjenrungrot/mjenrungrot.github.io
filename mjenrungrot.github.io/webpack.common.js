@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const path = require("path");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
