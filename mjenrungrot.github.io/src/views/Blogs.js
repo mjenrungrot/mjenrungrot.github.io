@@ -7,9 +7,8 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
 import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
 
+import Blog from "../components/Blog";
 import Main from "../layouts/Main";
 
 const styles = theme => ({
@@ -21,25 +20,20 @@ const styles = theme => ({
 });
 
 /**
- * Others View Component
+ * Blogs View Component
  * @param {object} props creation params
- * @return {object} Others component
+ * @return {object} Blogs component
  */
-function Others(props) {
-  const { classes } = props;
+function Blogs(props) {
   return (
     <Main>
-      <Paper className={classes.root}>
-        <Typography variant="h5" component="h3">
-          Others
-        </Typography>
-      </Paper>
+      <Blog />
     </Main>
   );
 }
 
-Others.propTypes = {
+Blogs.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Others);
+export default withStyles(styles)(Blogs);

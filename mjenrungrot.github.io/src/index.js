@@ -16,7 +16,7 @@ import Index from "./views/Index";
 import Works from "./views/Works";
 import Publications from "./views/Publications";
 import Projects from "./views/Projects";
-import Others from "./views/Others";
+import Blogs from "./views/Blogs";
 import Experimental from "./views/Experimental";
 
 // Material-UI Theme
@@ -62,7 +62,7 @@ class App extends React.Component {
             <Route path="/works" component={Works} />
             <Route path="/publications" component={Publications} />
             <Route path="/projects" component={Projects} />
-            <Route path="/others" component={Others} />
+            <Route path="/blogs" component={Blogs} />
             <Route path="/experimental" component={Experimental} />
             <Route component={Index} />
           </Switch>
