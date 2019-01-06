@@ -1,7 +1,6 @@
-/* eslint-disable */
 // @flow
 
-import React from "react";
+import React from "react"; // eslint-disable-line
 import ReactMarkdown from "markdown-to-jsx";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -41,6 +40,11 @@ const options = {
   }
 };
 
+/**
+ * Markdown component
+ * @param {object} props Property objects
+ * @return {object} Markdown component
+ */
 function Markdown(props) {
   return <ReactMarkdown options={options} {...props} />;
 }
