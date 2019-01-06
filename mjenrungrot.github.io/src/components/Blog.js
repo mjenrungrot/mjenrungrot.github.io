@@ -17,8 +17,7 @@ import {
 } from "@material-ui/core";
 
 import Markdown from "./Template/Markdown";
-import post1 from "../data/blogs/blog-post.1.md";
-import post2 from "../data/blogs/blog-post.2.md";
+import data from "../data/blogs";
 
 const styles = theme => ({
   layout: {
@@ -74,7 +73,15 @@ const featuredPosts = [
   }
 ];
 
-const posts = [post1, post2];
+const processMarkdowns = data => {
+  return data.map(markdown => {
+    const file = require("../" + markdown.file);
+    return {
+      content: file,
+      priority: markdown.priority
+    };
+  });
+};
 
 /**
  * Blog component
@@ -83,6 +90,9 @@ const posts = [post1, post2];
  */
 function Blog(props) {
   const { classes } = props;
+  const posts = processMarkdowns(data);
+  console.log(posts);
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -152,14 +162,16 @@ function Blog(props) {
               Contents
             </Typography>
             <Divider />
-            {posts.map(post => (
-              <Markdown
-                className={classes.markdown}
-                key={post.substring(0, 40)}
-              >
-                {post}
-              </Markdown>
-            ))}
+            {posts.map(post =>
+              post.priority ? (
+                <Markdown
+                  className={classes.markdown}
+                  key={post.content.substring(0, 40)}
+                >
+                  {post.content}
+                </Markdown>
+              ) : null
+            )}
           </Grid>
           {/* End main content */}
         </main>
