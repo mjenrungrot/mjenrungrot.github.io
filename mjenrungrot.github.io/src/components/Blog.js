@@ -3,6 +3,7 @@
 import React from "react"; // eslint-disable-line no-unused-vars
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 import {
   CssBaseline,
   Typography,
@@ -65,7 +66,7 @@ const featuredPosts = [
     link: null
   },
   {
-    title: "Post title",
+    title: "Featured Post",
     date: "January 5",
     description:
       "This is a wider card with supporting text below as a natural lead-in to additional content.",
@@ -122,11 +123,15 @@ function Blog(props) {
                       <Typography variant="subtitle1" paragraph>
                         {post.description}
                       </Typography>
-                      <Link to={post.link}>
-                        <Typography variant="subtitle1" color="primary">
-                          Continue reading...
-                        </Typography>
-                      </Link>
+                      {post.link ? (
+                        <Link to={post.link}>
+                          <Typography variant="subtitle1" color="primary">
+                            Continue reading...
+                          </Typography>
+                        </Link>
+                      ) : (
+                        <Typography variant="subtitle1" color="primary" />
+                      )}
                     </CardContent>
                   </div>
                   <Hidden xsDown>
