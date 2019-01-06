@@ -49,7 +49,7 @@ const styles = theme => ({
     flexShrink: 0,
     width: leftPanelWidth,
     padding: theme.spacing.unit * 3,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: 0,
       padding: 0,
       visibility: "hidden"
