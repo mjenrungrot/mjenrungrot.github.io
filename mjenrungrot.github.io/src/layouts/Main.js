@@ -80,9 +80,9 @@ const drawerConfig = [
     linkto: "/projects"
   },
   {
-    text: "Others",
+    text: "Blogs",
     icon: <NotesIcon />,
-    linkto: "/others"
+    linkto: "/blogs"
   },
   {
     text: "Experimental Section",
