@@ -1,3 +1,6 @@
 [submodule "mjenrungrot.github.io/src/mjenrungrot.github.io/src/resume/5c709cba875028422ce0dffd"]
 	path = mjenrungrot.github.io/src/mjenrungrot.github.io/src/resume/5c709cba875028422ce0dffd
 	url = https://git.overleaf.com/5c709cba875028422ce0dffd
+[submodule "mjenrungrot.github.io/src/data/resume"]
+	path = mjenrungrot.github.io/src/data/resume
+	url = https://git.overleaf.com/5c709cba875028422ce0dffd
