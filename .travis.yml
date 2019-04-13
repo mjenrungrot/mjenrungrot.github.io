@@ -23,5 +23,6 @@ deploy:                           # Deploy to surge [latest branch]
     github-token: $GITHUB_TOKEN
     keep-history: true
     local-dir: ./mjenrungrot.github.io/build
+    fqdn: mjenrungrot.com
     on:
       branch: source
