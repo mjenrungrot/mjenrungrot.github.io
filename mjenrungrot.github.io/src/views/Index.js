@@ -34,7 +34,7 @@ function Index(props) {
           About this site
         </Typography>
         <Typography component="p" gutterBottom>
-          A beatuful, responsive, react app written with ES2016, material-ui.
+          A beautiful, responsive, react app written with ES2016, material-ui.
         </Typography>
         <Typography component="p" gutterBottom>
           Welcome to my website. Please feel free to read more about me.
