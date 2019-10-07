@@ -22,28 +22,28 @@ import data from "../data/blogs";
 const styles = theme => ({
   layout: {
     width: "auto",
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3)
   },
   mainFeaturedPost: {
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
-    marginBottom: theme.spacing.unit * 4
+    marginBottom: theme.spacing(4)
   },
   mainFeaturePostContent: {
-    padding: `${theme.spacing.unit * 6}px`,
+    padding: `${theme.spacing(6)}px`,
     [theme.breakpoints.up("md")]: {
       paddingRight: 0
     }
   },
   mainGrid: {
-    marginTop: theme.spacing.unit * 3
+    marginTop: theme.spacing(3)
   },
   card: {
     display: "flex"
   },
   cardGrid: {
-    marginBottom: theme.spacing.unit * 2
+    marginBottom: theme.spacing(2)
   },
   cardDetails: {
     flex: 1
@@ -52,7 +52,7 @@ const styles = theme => ({
     width: 160
   },
   markdown: {
-    padding: `${theme.spacing.unit * 3}px 0`
+    padding: `${theme.spacing(3)}px 0`
   }
 });
 

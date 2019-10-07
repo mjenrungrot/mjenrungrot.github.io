@@ -43,19 +43,22 @@ const styles = theme => ({
   },
   canvas: {
     flexGrow: 1,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   leftPanel: {
     flexShrink: 0,
     width: leftPanelWidth,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
     [theme.breakpoints.down("md")]: {
       width: 0,
       padding: 0,
       visibility: "hidden"
     }
   },
-  toolbar: theme.mixins.toolbar
+  toolbar: theme.mixins.toolbar,
+  drawerLinkText: {
+    textDecoration: "none"
+  }
 });
 
 const drawerConfig = [
@@ -133,10 +136,17 @@ class Main extends React.Component {
           {drawerConfig.map((tuple, _) => {
             return (
               <div key={tuple.text}>
-                <Link to={tuple.linkto}>
+                <Link to={tuple.linkto} className={classes.drawerLinkText}>
                   <ListItem button key={tuple.text}>
                     <ListItemIcon>{tuple.icon}</ListItemIcon>
-                    <ListItemText primary={tuple.text} />
+                    <ListItemText
+                      disableTypography
+                      primary={
+                        <Typography variant="subtitle1">
+                          {tuple.text}
+                        </Typography>
+                      }
+                    />
                   </ListItem>
                 </Link>
               </div>

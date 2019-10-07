@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = theme => ({
   listItem: {
-    marginTop: theme.spacing.unit
+    marginTop: theme.spacing(1)
   }
 });
 

@@ -32,11 +32,11 @@ import CV from "../../data/cv.pdf"; // eslint-disable-line
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2)
   },
   card: {
-    marginBottom: theme.spacing.unit * 2
+    marginBottom: theme.spacing(2)
   },
   expand: {
     transform: "rotate(0deg)",
@@ -56,7 +56,7 @@ const styles = theme => ({
     textDecoration: "none"
   },
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   }
 });
 

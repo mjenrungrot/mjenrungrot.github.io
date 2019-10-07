@@ -34,7 +34,13 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    useNextVariants: true
+    subtitle1: {
+      fontSize: 12,
+      fontWeight: 500
+    },
+    subtitle2: {
+      fontSize: 10
+    }
   }
 });
 
