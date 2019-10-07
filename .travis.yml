@@ -6,7 +6,7 @@ cache:
     - node_modules
 install:
   - cd mjenrungrot.github.io
-  - npm install               
+  - npm install --only=prod              
 script:
   - npm test                      # Test 
   - npm run build                 # Build for pre-deploying
