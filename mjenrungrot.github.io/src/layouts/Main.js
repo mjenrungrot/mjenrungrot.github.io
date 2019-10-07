@@ -1,9 +1,9 @@
 // @flow
 
-import React from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import React from 'react';
+import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
 import {
   Typography,
   AppBar,
@@ -13,85 +13,85 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  SwipeableDrawer
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import BusinessIcon from "@material-ui/icons/Business";
-import SchoolIcon from "@material-ui/icons/School";
-import PublicIcon from "@material-ui/icons/Public";
-import NotesIcon from "@material-ui/icons/Notes";
-import BuildIcon from "@material-ui/icons/Build";
+  SwipeableDrawer,
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import BusinessIcon from '@material-ui/icons/Business';
+import SchoolIcon from '@material-ui/icons/School';
+import PublicIcon from '@material-ui/icons/Public';
+import NotesIcon from '@material-ui/icons/Notes';
+import BuildIcon from '@material-ui/icons/Build';
 
-import Info from "../components/Template/Info";
+import Info from '../components/Template/Info';
 
 const leftPanelWidth = 500;
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    display: "flex"
+    display: 'flex',
   },
   list: {
-    margin: 0
+    margin: 0,
   },
   appBar: {
-    zIndex: theme.zIndex.drawer + 1
+    zIndex: theme.zIndex.drawer + 1,
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20
+    marginRight: 20,
   },
   canvas: {
     flexGrow: 1,
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
   },
   leftPanel: {
     flexShrink: 0,
     width: leftPanelWidth,
     padding: theme.spacing(3),
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down('md')]: {
       width: 0,
       padding: 0,
-      visibility: "hidden"
-    }
+      visibility: 'hidden',
+    },
   },
   toolbar: theme.mixins.toolbar,
   drawerLinkText: {
-    textDecoration: "none"
-  }
+    textDecoration: 'none',
+  },
 });
 
 const drawerConfig = [
   {
-    text: "Main",
+    text: 'Main',
     icon: <InboxIcon />,
-    linkto: "/"
+    linkto: '/',
   },
   {
-    text: "Work Experiences",
+    text: 'Work Experiences',
     icon: <BusinessIcon />,
-    linkto: "/works"
+    linkto: '/works',
   },
   {
-    text: "Publications",
+    text: 'Publications',
     icon: <SchoolIcon />,
-    linkto: "/publications"
+    linkto: '/publications',
   },
   {
-    text: "Projects",
+    text: 'Projects',
     icon: <PublicIcon />,
-    linkto: "/projects"
+    linkto: '/projects',
   },
   {
-    text: "Blogs",
+    text: 'Blogs',
     icon: <NotesIcon />,
-    linkto: "/blogs"
+    linkto: '/blogs',
   },
   {
-    text: "Experimental Section",
+    text: 'Experimental Section',
     icon: <BuildIcon />,
-    linkto: "/experimental"
-  }
+    linkto: '/experimental',
+  },
 ];
 
 /**
@@ -105,7 +105,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
 
@@ -118,7 +118,7 @@ class Main extends React.Component {
     return () => {
       this.setState({
         ...this.state,
-        isOpen: open
+        isOpen: open,
       });
     };
   }
@@ -128,7 +128,7 @@ class Main extends React.Component {
    * @return {object} Main component
    */
   render() {
-    const { classes } = this.props;
+    const {classes} = this.props;
 
     const sideList = (
       <div className={classes.list}>
@@ -201,11 +201,12 @@ class Main extends React.Component {
 }
 
 Main.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.object.isRequired,
 };
 
 Main.defaultProps = {
-  children: null
+  children: null,
 };
 
 export default withStyles(styles)(Main);

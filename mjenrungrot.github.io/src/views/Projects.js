@@ -1,33 +1,33 @@
 // @flow
 
-import React from "react"; // eslint-disable-line no-unused-vars
-import ReactDOM from "react-dom"; // eslint-disable-line no-unused-vars
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import React from 'react'; // eslint-disable-line no-unused-vars
+import ReactDOM from 'react-dom'; // eslint-disable-line no-unused-vars
+import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import {withStyles} from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
-import Main from "../layouts/Main";
-import data from "../data/projects";
+import Main from '../layouts/Main';
+import data from '../data/projects';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    marginBottom: theme.spacing(2)
-  }
+    marginBottom: theme.spacing(2),
+  },
 });
 
-const processPDF = pdf => {
+const processPDF = (pdf) => {
   if (pdf !== null) {
-    const pdfFile = require("../" + pdf);
+    const pdfFile = require('../' + pdf);
     return (
       <Link to={pdfFile} target="_self">
-        <Typography style={{ display: "inline-block" }}>[PDF]</Typography>
+        <Typography style={{display: 'inline-block'}}>[PDF]</Typography>
       </Link>
     );
   } else {
@@ -35,12 +35,12 @@ const processPDF = pdf => {
   }
 };
 
-const processLink = link => {
+const processLink = (link) => {
   if (link !== null) {
     if (/^https?:\/\//.test(link)) {
       return (
         <a href={link} target="_self">
-          <Typography style={{ display: "inline-block" }}>
+          <Typography style={{display: 'inline-block'}}>
             [Read More]
           </Typography>
         </a>
@@ -48,7 +48,7 @@ const processLink = link => {
     } else {
       return (
         <Link to={link} target="_self">
-          <Typography style={{ display: "inline-block" }}>
+          <Typography style={{display: 'inline-block'}}>
             [Read More]
           </Typography>
         </Link>
@@ -59,7 +59,7 @@ const processLink = link => {
   }
 };
 
-const getItems = props =>
+const getItems = (props) =>
   data.map(function(item, i) {
     return (
       <div key={item.title}>
@@ -67,21 +67,21 @@ const getItems = props =>
           <div>
             <Typography
               variant="h6"
-              style={{ display: "inline-block", width: "50%" }}
+              style={{display: 'inline-block', width: '50%'}}
             >
               {item.title}
             </Typography>
             <Typography
               variant="subtitle2"
               style={{
-                display: "inline-block",
-                width: "50%",
-                textAlign: "right"
+                display: 'inline-block',
+                width: '50%',
+                textAlign: 'right',
               }}
             >
-              {item.current
-                ? `From ${item.fromDate}`
-                : `From ${item.fromDate} to ${item.toDate}`}
+              {item.current ?
+                `From ${item.fromDate}` :
+                `From ${item.fromDate} to ${item.toDate}`}
             </Typography>
           </div>
           <Typography variant="subtitle2">{item.subtitle}</Typography>
@@ -111,7 +111,7 @@ function Projects(props) {
 }
 
 Projects.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Projects);

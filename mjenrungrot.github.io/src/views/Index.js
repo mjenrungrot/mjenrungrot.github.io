@@ -1,23 +1,23 @@
 // @flow
 
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
-import ReactDOM from "react-dom";
-import PropTypes from "prop-types";
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
+import {withStyles} from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
-import Main from "../layouts/Main";
+import Main from '../layouts/Main';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2)
-  }
+    paddingBottom: theme.spacing(2),
+  },
 });
 
 /**
@@ -26,7 +26,7 @@ const styles = theme => ({
  * @return {object} Index component
  */
 function Index(props) {
-  const { classes } = props;
+  const {classes} = props;
   return (
     <Main>
       <Paper className={classes.root}>
@@ -40,7 +40,7 @@ function Index(props) {
           Welcome to my website. Please feel free to read more about me.
         </Typography>
         <Typography component="p" gutterBottom>
-          Source available at{" "}
+          Source available at{' '}
           <a href="https://github.com/mjenrungrot/mjenrungrot.github.io">
             Here
           </a>
@@ -52,7 +52,7 @@ function Index(props) {
 }
 
 Index.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Index);

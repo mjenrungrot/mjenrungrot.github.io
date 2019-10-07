@@ -1,12 +1,12 @@
 // @flow
 
 // eslint-disable-next-line no-unused-vars
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { withStyles } from "@material-ui/core/styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import {withStyles} from '@material-ui/core/styles';
 // eslint-disable-next-line no-unused-vars
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import {
   Paper,
   Divider,
@@ -19,78 +19,78 @@ import {
   CardHeader,
   CardContent,
   Collapse,
-  Button
-} from "@material-ui/core";
-import IconButton from "@material-ui/core/IconButton";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdSchool, MdEmail, MdPhone } from "react-icons/md";
+  Button,
+} from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {FaLinkedin, FaGithub} from 'react-icons/fa';
+import {MdSchool, MdEmail, MdPhone} from 'react-icons/md';
 
 // $FlowFixMe
 import CV from "../../data/cv.pdf"; // eslint-disable-line
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2)
+    paddingBottom: theme.spacing(2),
   },
   card: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest
-    })
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
   },
   expandOpen: {
-    transform: "rotate(180deg)"
+    transform: 'rotate(180deg)',
   },
   badges: {
-    width: "100%",
-    backgroundColor: theme.palette.background.paper
+    width: '100%',
+    backgroundColor: theme.palette.background.paper,
   },
   linkText: {
-    textDecoration: "none"
+    textDecoration: 'none',
   },
   button: {
-    margin: theme.spacing(1)
-  }
+    margin: theme.spacing(1),
+  },
 });
 
 const badges = [
   {
     icon: <FaLinkedin />,
-    info: "mjenrungrot",
-    link: "https://linkedin.com/in/mjenrungrot",
-    type: "LinkedIn"
+    info: 'mjenrungrot',
+    link: 'https://linkedin.com/in/mjenrungrot',
+    type: 'LinkedIn',
   },
   {
     icon: <FaGithub />,
-    info: "mjenrungrot",
-    link: "https://github.com/mjenrungrot",
-    type: "GitHub"
+    info: 'mjenrungrot',
+    link: 'https://github.com/mjenrungrot',
+    type: 'GitHub',
   },
   {
     icon: <MdSchool />,
-    info: "mjenrungrot[at]hmc.edu",
-    link: "mailto:mjenrungrot[at]hmc.edu",
-    type: "E-mail (School)"
+    info: 'mjenrungrot[at]hmc.edu',
+    link: 'mailto:mjenrungrot[at]hmc.edu',
+    type: 'E-mail (School)',
   },
   {
     icon: <MdEmail />,
-    info: "mek.1803[at]gmail.com",
-    link: "mailto:mek.1803[at]gmail.com",
-    type: "E-mail (Personal)"
+    info: 'mek.1803[at]gmail.com',
+    link: 'mailto:mek.1803[at]gmail.com',
+    type: 'E-mail (Personal)',
   },
   {
     icon: <MdPhone />,
-    info: "+1-617-417-5653",
+    info: '+1-617-417-5653',
     link: null,
-    type: "Phone"
-  }
+    type: 'Phone',
+  },
 ];
 
 /**
@@ -106,7 +106,7 @@ export class Info extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false
+      expanded: false,
     };
   }
 
@@ -115,7 +115,7 @@ export class Info extends React.Component {
    */
   handleExpandClick() {
     this.setState((state, props) => ({
-      expanded: !state.expanded
+      expanded: !state.expanded,
     }));
   }
 
@@ -124,8 +124,8 @@ export class Info extends React.Component {
    * @return {object} info component
    */
   render() {
-    const { classes } = this.props;
-    const { expanded } = this.state;
+    const {classes} = this.props;
+    const {expanded} = this.state;
 
     return (
       <div>
@@ -139,7 +139,7 @@ export class Info extends React.Component {
             action={
               <IconButton
                 className={classnames(classes.expand, {
-                  [classes.expandOpen]: expanded
+                  [classes.expandOpen]: expanded,
                 })}
                 onClick={this.handleExpandClick.bind(this)}
                 aria-expanded={expanded}
@@ -155,9 +155,9 @@ export class Info extends React.Component {
             {/* <CardMedia /> */}
             <CardContent>
               <Typography component="p" gutterBottom>
-                I'm a computer scientist who is passionate about deep learning
-                particularly in the intersection of computer vision and audio
-                signal processing.
+                I&apos;m a computer scientist who is passionate about deep
+                learning particularly in the intersection of computer vision
+                and audio signal processing.
               </Typography>
               <Typography component="p" gutterBottom>
                 I did a lot of C/C++, Python, JavaScript, and LaTeX. I also knew
@@ -192,7 +192,7 @@ export class Info extends React.Component {
           </Typography>
           <Divider />
           <List className={classes.badges}>
-            {badges.map(badge => (
+            {badges.map((badge) => (
               <div key={badge.type}>
                 <a href={badge.link} className={classes.linkText}>
                   <ListItem button>
@@ -212,7 +212,7 @@ export class Info extends React.Component {
 }
 
 Info.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Info);

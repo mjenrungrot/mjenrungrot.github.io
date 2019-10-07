@@ -1,9 +1,10 @@
 // @flow
+/* eslint-disable max-len */
 
-import React from "react"; // eslint-disable-line no-unused-vars
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import React from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
+import {Link} from 'react-router-dom';
 import {
   CssBaseline,
   Typography,
@@ -13,72 +14,72 @@ import {
   CardContent,
   CardMedia,
   Hidden,
-  Divider
-} from "@material-ui/core";
+  Divider,
+} from '@material-ui/core';
 
-import Markdown from "./Template/Markdown";
-import data from "../data/blogs";
+import Markdown from './Template/Markdown';
+import data from '../data/blogs';
 
-const styles = theme => ({
+const styles = (theme) => ({
   layout: {
-    width: "auto",
+    width: 'auto',
     marginLeft: theme.spacing(3),
-    marginRight: theme.spacing(3)
+    marginRight: theme.spacing(3),
   },
   mainFeaturedPost: {
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
   },
   mainFeaturePostContent: {
     padding: `${theme.spacing(6)}px`,
-    [theme.breakpoints.up("md")]: {
-      paddingRight: 0
-    }
+    [theme.breakpoints.up('md')]: {
+      paddingRight: 0,
+    },
   },
   mainGrid: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
   },
   card: {
-    display: "flex"
+    display: 'flex',
   },
   cardGrid: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   cardDetails: {
-    flex: 1
+    flex: 1,
   },
   cardMedia: {
-    width: 160
+    width: 160,
   },
   markdown: {
-    padding: `${theme.spacing(3)}px 0`
-  }
+    padding: `${theme.spacing(3)}px 0`,
+  },
 });
 
 const featuredPosts = [
   {
-    title: "React Site",
-    date: "January 5",
+    title: 'React Site',
+    date: 'January 5',
     description:
-      "I created my personal site using React. This site will be used to keep updates on my works and other random stuffs.",
-    link: null
+      'I created my personal site using React. This site will be used to keep updates on my works and other random stuffs.',
+    link: null,
   },
   {
-    title: "Featured Post",
-    date: "January 5",
+    title: 'Featured Post',
+    date: 'January 5',
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    link: null
-  }
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    link: null,
+  },
 ];
 
-const processMarkdowns = data => {
-  return data.map(markdown => {
-    const file = require("../" + markdown.file);
+const processMarkdowns = (data) => {
+  return data.map((markdown) => {
+    const file = require('../' + markdown.file);
     return {
       content: file,
-      priority: markdown.priority
+      priority: markdown.priority,
     };
   });
 };
@@ -89,7 +90,7 @@ const processMarkdowns = data => {
  * @return {object} Blog component
  */
 function Blog(props) {
-  const { classes } = props;
+  const {classes} = props;
   const posts = processMarkdowns(data);
   console.log(posts);
 
@@ -119,7 +120,7 @@ function Blog(props) {
           {/* End main featured post */}
           {/* Sub featured posts */}
           <Grid container spacing={40} className={classes.cardGrid}>
-            {featuredPosts.map(post => (
+            {featuredPosts.map((post) => (
               <Grid item key={post.title} xs={12} md={6}>
                 <Card className={classes.card}>
                   <div className={classes.cardDetails}>
@@ -162,7 +163,7 @@ function Blog(props) {
               Contents
             </Typography>
             <Divider />
-            {posts.map(post =>
+            {posts.map((post) =>
               post.priority ? (
                 <Markdown
                   className={classes.markdown}
@@ -181,7 +182,7 @@ function Blog(props) {
 }
 
 Blog.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Blog);

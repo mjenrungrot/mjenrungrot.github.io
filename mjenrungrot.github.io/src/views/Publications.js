@@ -1,43 +1,43 @@
 // @flow
 
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
-import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import {withStyles} from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
-import Main from "../layouts/Main";
-import data from "../data/publications";
+import Main from '../layouts/Main';
+import data from '../data/publications';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    marginBottom: theme.spacing(2)
-  }
+    marginBottom: theme.spacing(2),
+  },
 });
 
 const processPublicationStatus = (venue, status) => {
   if (venue !== null) {
-    return status + " to " + venue;
+    return status + ' to ' + venue;
   } else {
     return status;
   }
 };
 
-const processPDF = pdf => {
+const processPDF = (pdf) => {
   if (pdf !== null) {
-    const pdfFile = require("../" + pdf);
+    const pdfFile = require('../' + pdf);
     return (
       <Link to={pdfFile} target="_self">
-        <Typography style={{ display: "inline-block" }}>[PDF]</Typography>
+        <Typography style={{display: 'inline-block'}}>[PDF]</Typography>
       </Link>
     );
   } else {
@@ -45,18 +45,18 @@ const processPDF = pdf => {
   }
 };
 
-const processCode = code => {
+const processCode = (code) => {
   if (code !== null) {
     if (/^https?:\/\//.test(code)) {
       return (
         <a href={code} target="_self">
-          <Typography style={{ display: "inline-block" }}>[Code]</Typography>
+          <Typography style={{display: 'inline-block'}}>[Code]</Typography>
         </a>
       );
     } else {
       return (
         <Link to={code} target="_self">
-          <Typography style={{ display: "inline-block" }}>[Code]</Typography>
+          <Typography style={{display: 'inline-block'}}>[Code]</Typography>
         </Link>
       );
     }
@@ -65,12 +65,12 @@ const processCode = code => {
   }
 };
 
-const processLink = link => {
+const processLink = (link) => {
   if (link !== null) {
     if (/^https?:\/\//.test(link)) {
       return (
         <a href={link} target="_self">
-          <Typography style={{ display: "inline-block" }}>
+          <Typography style={{display: 'inline-block'}}>
             [Read More]
           </Typography>
         </a>
@@ -78,7 +78,7 @@ const processLink = link => {
     } else {
       return (
         <Link to={link} target="_self">
-          <Typography style={{ display: "inline-block" }}>
+          <Typography style={{display: 'inline-block'}}>
             [Read More]
           </Typography>
         </Link>
@@ -89,29 +89,29 @@ const processLink = link => {
   }
 };
 
-const getItems = props =>
-  data.map(item => (
+const getItems = (props) =>
+  data.map((item) => (
     <div key={item.title}>
       <Paper className={props.classes.root}>
         <div>
           <Typography
             variant="h6"
-            style={{ display: "inline-block", width: "50%" }}
+            style={{display: 'inline-block', width: '50%'}}
           >
             {item.title}
           </Typography>
           <Typography
             variant="h6"
             style={{
-              display: "inline-block",
-              width: "50%",
-              textAlign: "right"
+              display: 'inline-block',
+              width: '50%',
+              textAlign: 'right',
             }}
           >
             {item.date}
           </Typography>
         </div>
-        <Typography variant="subtitle1">{item.authors.join(", ")}</Typography>
+        <Typography variant="subtitle1">{item.authors.join(', ')}</Typography>
         <Typography variant="subtitle2">
           {processPublicationStatus(item.venue, item.status)}
         </Typography>
@@ -141,7 +141,7 @@ function Publications(props) {
 }
 
 Publications.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Publications);
