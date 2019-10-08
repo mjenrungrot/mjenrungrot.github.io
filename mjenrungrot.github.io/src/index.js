@@ -23,23 +23,31 @@ import Experimental from './views/Experimental';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#72cff8',
-      main: '#4fc3f7',
-      dark: '#3788ac',
+      light: '#ffffff',
+      main: '#fafafa',
+      dark: '#c7c7c7',
     },
     secondary: {
-      light: '#53c4f7',
-      main: '#29b6f6',
-      dark: '#1c7fac',
+      light: '#ffbcaf',
+      main: '#ff8a80',
+      dark: '#c85a54',
     },
   },
   typography: {
+    color: 'black',
+    fontFamily: '"Source Sans Pro", sans-serif',
+    useNextVariant: true,
     subtitle1: {
       fontSize: 12,
       fontWeight: 500,
     },
     subtitle2: {
       fontSize: 10,
+    },
+  },
+  overrides: {
+    MuiButton: {
+      color: 'black',
     },
   },
 });

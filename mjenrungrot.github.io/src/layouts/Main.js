@@ -14,6 +14,8 @@ import {
   ListItemIcon,
   ListItemText,
   SwipeableDrawer,
+  Tab,
+  Tabs,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
@@ -58,6 +60,7 @@ const styles = (theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerLinkText: {
     textDecoration: 'none',
+    color: 'inherit',
   },
 });
 
@@ -136,7 +139,8 @@ class Main extends React.Component {
           {drawerConfig.map((tuple, _) => {
             return (
               <div key={tuple.text}>
-                <Link to={tuple.linkto} className={classes.drawerLinkText}>
+                <Link to={tuple.linkto}
+                  className={classes.drawerLinkText}>
                   <ListItem button key={tuple.text}>
                     <ListItemIcon>{tuple.icon}</ListItemIcon>
                     <ListItemText
@@ -168,9 +172,16 @@ class Main extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit">
-              Personal Webpage
-            </Typography>
+            <Tabs
+              indicatorColor="primary"
+              textColor="primary"
+            >
+              <Tab label="Home" />
+              <Tab label="About" />
+              <Tab label="Research" />
+              <Tab label="Blog" />
+              <Tab label="Contact" />
+            </Tabs>
           </Toolbar>
         </AppBar>
         <SwipeableDrawer
