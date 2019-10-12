@@ -198,8 +198,6 @@ class Main extends React.Component {
             <MenuIcon />
           </IconButton>
           <Tabs
-            indicatorColor="primary"
-            textColor="primary"
             onChange={handleChangeTab}
             value={this.state.selectedTab}
           >

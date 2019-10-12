@@ -49,6 +49,11 @@ const theme = createMuiTheme({
     MuiButton: {
       color: 'black',
     },
+    MuiTabs: {
+      indicator: {
+        backgroundColor: '#1492ff',
+      },
+    },
   },
 });
 
