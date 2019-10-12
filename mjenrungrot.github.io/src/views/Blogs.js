@@ -26,7 +26,7 @@ const styles = (theme) => ({
  */
 function Blogs(props) {
   return (
-    <Main>
+    <Main selectedTab="/blogs">
       <Blog />
     </Main>
   );

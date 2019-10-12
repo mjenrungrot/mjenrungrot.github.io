@@ -109,6 +109,7 @@ class Main extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
+      selectedTab: props.selectedTab ? props.selectedTab : '/',
     };
   }
 
@@ -160,52 +161,102 @@ class Main extends React.Component {
       </div>
     );
 
+    // eslint-disable-next-line no-unused-vars
+    const swipeableDrawer = (
+      <SwipeableDrawer
+        open={this.state.isOpen}
+        onClose={this.toggleDrawer(false)}
+        onOpen={this.toggleDrawer(true)}
+      >
+        <div
+          tabIndex={0}
+          role="button"
+          onClick={this.toggleDrawer(false)}
+          onKeyDown={this.toggleDrawer(false)}
+        >
+          {sideList}
+        </div>
+      </SwipeableDrawer>
+    );
+
+    const handleChangeTab = (event, newValue) => {
+      this.setState({
+        ...this.state,
+        selectedTab: newValue,
+      });
+    };
+
+    const header = (
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar>
+          <IconButton
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="Menu"
+            onClick={this.toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Tabs
+            indicatorColor="primary"
+            textColor="primary"
+            onChange={handleChangeTab}
+            value={this.state.selectedTab}
+          >
+            <Tab
+              value={'/'}
+              label="Home"
+              component={Link}
+              to={'/'}
+            />
+            <Tab
+              value={'/about'}
+              label="About"
+              component={Link}
+              to={'/about'}
+            />
+            <Tab
+              value={'/publications'}
+              label="Research"
+              component={Link}
+              to={'/publications'}
+            />
+            <Tab
+              value={'/blogs'}
+              label="Blog"
+              component={Link}
+              to={'/blogs'}
+            />
+            <Tab value={'/contact'}
+              label="Contact"
+              component={Link}
+              to={'/contact'}
+            />
+          </Tabs>
+        </Toolbar>
+      </AppBar>
+    );
+
+    const infoBar = (
+      <div className={classes.leftPanel}>
+        <div className={classes.toolbar} />
+        <Info />
+      </div>
+    );
+
+    const mainContent = (
+      <main className={classes.canvas}>
+        <div className={classes.toolbar} />
+        {this.props.children}
+      </main>
+    );
+
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-              onClick={this.toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Tabs
-              indicatorColor="primary"
-              textColor="primary"
-            >
-              <Tab label="Home" />
-              <Tab label="About" />
-              <Tab label="Research" />
-              <Tab label="Blog" />
-              <Tab label="Contact" />
-            </Tabs>
-          </Toolbar>
-        </AppBar>
-        <SwipeableDrawer
-          open={this.state.isOpen}
-          onClose={this.toggleDrawer(false)}
-          onOpen={this.toggleDrawer(true)}
-        >
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer(false)}
-            onKeyDown={this.toggleDrawer(false)}
-          >
-            {sideList}
-          </div>
-        </SwipeableDrawer>
-        <div className={classes.leftPanel}>
-          <div className={classes.toolbar} />
-          <Info />
-        </div>
-        <main className={classes.canvas}>
-          <div className={classes.toolbar} />
-          {this.props.children}
-        </main>
+        {header}
+        {/* {swipeableDrawer} */}
+        {infoBar}
+        {mainContent}
       </div>
     );
   }
@@ -214,6 +265,7 @@ class Main extends React.Component {
 Main.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.object.isRequired,
+  selectedTab: PropTypes.string.isRequired,
 };
 
 Main.defaultProps = {

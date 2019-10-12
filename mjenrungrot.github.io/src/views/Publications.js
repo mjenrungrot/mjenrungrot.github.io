@@ -131,7 +131,7 @@ const getItems = (props) =>
  */
 function Publications(props) {
   return (
-    <Main>
+    <Main selectedTab="/publications">
       <Typography variant="h3" gutterBottom>
         Publications
       </Typography>

@@ -66,7 +66,7 @@ const getItems = (props, current) =>
  */
 function Works(props) {
   return (
-    <Main>
+    <Main selectedTab="/works">
       <Typography variant="h3" gutterBottom>
         Work Experiences
       </Typography>

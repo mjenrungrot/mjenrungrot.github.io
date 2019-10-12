@@ -28,16 +28,13 @@ const styles = (theme) => ({
 function Index(props) {
   const {classes} = props;
   return (
-    <Main>
+    <Main selectedTab="/">
       <Paper className={classes.root}>
         <Typography variant="h5" component="h3" gutterBottom>
           About this site
         </Typography>
         <Typography component="p" gutterBottom>
-          A beautiful, responsive, react app written with ES2016, material-ui.
-        </Typography>
-        <Typography component="p" gutterBottom>
-          Welcome to my website. Please feel free to read more about me.
+          Welcome to my personal website.
         </Typography>
         <Typography component="p" gutterBottom>
           Source available at{' '}
