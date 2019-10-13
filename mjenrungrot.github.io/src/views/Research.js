@@ -125,13 +125,13 @@ const getItems = (props) =>
   ));
 
 /**
- * Publications View Component
+ * Research View Component
  * @param {object} props creation params
- * @return {object} Publications component
+ * @return {object} Research component
  */
-function Publications(props) {
+function Research(props) {
   return (
-    <Main selectedTab="/publications">
+    <Main selectedTab="/research">
       <Typography variant="h3" gutterBottom>
         Publications
       </Typography>
@@ -140,8 +140,8 @@ function Publications(props) {
   );
 }
 
-Publications.propTypes = {
+Research.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Publications);
+export default withStyles(styles)(Research);

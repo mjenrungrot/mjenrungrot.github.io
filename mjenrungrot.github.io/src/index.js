@@ -12,13 +12,11 @@ import 'typeface-roboto';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 // Pages
-import Index from './views/Index';
+import Home from './views/Home';
 import About from './views/About';
-import Works from './views/Works';
-import Contact from './views/Contact';
-import Publications from './views/Publications';
-import Projects from './views/Projects';
+import Research from './views/Research';
 import Blogs from './views/Blogs';
+import Contact from './views/Contact';
 import Experimental from './views/Experimental';
 
 // Material-UI Theme
@@ -79,15 +77,13 @@ class App extends React.Component {
       <MuiThemeProvider theme={theme}>
         <Router>
           <Switch>
-            <Route exact path="/" component={Index} />
+            <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/works" component={Works} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/publications" component={Publications} />
-            <Route path="/projects" component={Projects} />
+            <Route path="/research" component={Research} />
             <Route path="/blogs" component={Blogs} />
+            <Route path="/contact" component={Contact} />
             <Route path="/experimental" component={Experimental} />
-            <Route component={Index} />
+            <Route component={Home} />
           </Switch>
         </Router>
       </MuiThemeProvider>

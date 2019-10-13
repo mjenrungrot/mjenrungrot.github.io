@@ -66,29 +66,29 @@ const styles = (theme) => ({
 
 const drawerConfig = [
   {
-    text: 'Main',
+    text: 'Home',
     icon: <InboxIcon />,
     linkto: '/',
   },
   {
-    text: 'Work Experiences',
+    text: 'About',
     icon: <BusinessIcon />,
-    linkto: '/works',
+    linkto: '/about',
   },
   {
-    text: 'Publications',
+    text: 'Research',
     icon: <SchoolIcon />,
-    linkto: '/publications',
-  },
-  {
-    text: 'Projects',
-    icon: <PublicIcon />,
-    linkto: '/projects',
+    linkto: '/research',
   },
   {
     text: 'Blogs',
     icon: <NotesIcon />,
     linkto: '/blogs',
+  },
+  {
+    text: 'Contact',
+    icon: <PublicIcon />,
+    linkto: '/contact',
   },
   {
     text: 'Experimental Section',
@@ -214,10 +214,10 @@ class Main extends React.Component {
               to={'/about'}
             />
             <Tab
-              value={'/publications'}
+              value={'/research'}
               label="Research"
               component={Link}
-              to={'/publications'}
+              to={'/research'}
             />
             <Tab
               value={'/blogs'}
@@ -264,7 +264,7 @@ class Main extends React.Component {
       return (
         <div className={classes.root}>
           {header}
-          {/* {swipeableDrawer} */}
+          {swipeableDrawer}
           {infoBar(this.props.showContact)}
           {mainContent}
         </div>
@@ -273,7 +273,7 @@ class Main extends React.Component {
       return (
         <div className={classes.root}>
           {header}
-          {/* {swipeableDrawer} */}
+          {swipeableDrawer}
           {mainContent}
         </div>
       );

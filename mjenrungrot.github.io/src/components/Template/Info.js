@@ -57,6 +57,19 @@ const styles = (theme) => ({
   button: {
     margin: theme.spacing(1),
   },
+  contactListItemText: {
+    marginLeft: theme.spacing(1),
+    color: '#1492ff',
+    textDecoration: 'none',
+  },
+  cvButtonText: {
+    color: '#1492ff',
+    textDecoration: 'none',
+  },
+  resumeButtonText: {
+    color: '#1492ff',
+    textDecoration: 'none',
+  },
 });
 
 const badges = [
@@ -126,7 +139,9 @@ export class Info extends React.Component {
               <a href={badge.link} className={classes.linkText}>
                 <ListItem button>
                   <Avatar>{badge.icon}</Avatar>
-                  <ListItemText secondary={badge.type}>
+                  <ListItemText
+                    className={classes.contactListItemText}
+                    secondary={badge.type}>
                     {badge.info}
                   </ListItemText>
                 </ListItem>
@@ -175,11 +190,14 @@ export class Info extends React.Component {
                 color="primary"
                 className={classes.button}
               >
-                <Typography variant="subtitle1">
-                  <Link to={CV} target="_self">
-                    CV
-                  </Link>
-                </Typography>
+                <Link to={CV} target="_self">
+                  <Typography
+                    variant="subtitle1"
+                    className={classes.cvButtonText}
+                  >
+                      CV
+                  </Typography>
+                </Link>
               </Button>
               <Button
                 variant="contained"
@@ -187,7 +205,12 @@ export class Info extends React.Component {
                 className={classes.button}
                 disabled
               >
-                <Typography variant="subtitle1">Resume</Typography>
+                <Typography
+                  variant="subtitle1"
+                  className={classes.resumeButtonText}
+                >
+                  Resume
+                </Typography>
               </Button>
             </CardContent>
           </Collapse>

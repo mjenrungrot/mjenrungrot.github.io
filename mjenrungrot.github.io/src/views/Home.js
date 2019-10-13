@@ -25,11 +25,11 @@ const styles = (theme) => ({
 });
 
 /**
- * Index View Component
+ * Home View Component
  * @param {object} props creation params
- * @return {object} Index component
+ * @return {object} Home component
  */
-function Index(props) {
+function Home(props) {
   const {classes} = props;
   return (
     <Main selectedTab="/">
@@ -54,8 +54,8 @@ function Index(props) {
   );
 }
 
-Index.propTypes = {
+Home.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Index);
+export default withStyles(styles)(Home);

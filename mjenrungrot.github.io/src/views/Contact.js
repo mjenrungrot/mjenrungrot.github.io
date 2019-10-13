@@ -20,6 +20,9 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
   },
+  address: {
+    marginLeft: theme.spacing(3),
+  },
 });
 
 /**
@@ -31,7 +34,7 @@ function Contact(props) {
   const {classes} = props;
   return (
     <Main selectedTab="/contact" infoBar showContact>
-      <Fade in="true">
+      <Fade in>
         <Paper className={classes.root}>
           <Typography variant="h5" gutterBottom>
             Conctact
@@ -57,15 +60,13 @@ function Contact(props) {
             please refer to the following address.
           </Typography>
           <br />
-          <indent>
-            <Typography style={{marginLeft: '2%'}}>
-              Teerapat Jenrungrot<br />
-              Bill and Melinda Gates Center for Computer Science and
-              Engineering<br />
-              3800 E Stevens Way NE<br />
-              Seattle, WA 98195
-            </Typography>
-          </indent>
+          <Typography className={classes.address}>
+            Teerapat Jenrungrot<br />
+            Bill and Melinda Gates Center for Computer Science and
+            Engineering<br />
+            3800 E Stevens Way NE<br />
+            Seattle, WA 98195
+          </Typography>
         </Paper>
       </Fade>
     </Main>
