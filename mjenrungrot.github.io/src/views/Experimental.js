@@ -28,7 +28,7 @@ const styles = (theme) => ({
 function Experimental(props) {
   const {classes} = props;
   return (
-    <Main>
+    <Main selectedTab="/experimental">
       <Paper className={classes.root}>
         <Typography variant="h5" component="h3" gutterBottom>
           Experimental

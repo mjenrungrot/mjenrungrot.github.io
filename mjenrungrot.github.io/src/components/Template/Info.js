@@ -5,7 +5,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core/styles';
-// eslint-disable-next-line no-unused-vars
 import {Link} from 'react-router-dom';
 import {
   Paper,
@@ -24,7 +23,7 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {FaLinkedin, FaGithub} from 'react-icons/fa';
-import {MdSchool, MdEmail, MdPhone} from 'react-icons/md';
+import {MdSchool} from 'react-icons/md';
 
 // $FlowFixMe
 import CV from "../../data/cv.pdf"; // eslint-disable-line
@@ -58,6 +57,19 @@ const styles = (theme) => ({
   button: {
     margin: theme.spacing(1),
   },
+  contactListItemText: {
+    marginLeft: theme.spacing(1),
+    color: '#1492ff',
+    textDecoration: 'none',
+  },
+  cvButtonText: {
+    color: '#1492ff',
+    textDecoration: 'none',
+  },
+  resumeButtonText: {
+    color: '#1492ff',
+    textDecoration: 'none',
+  },
 });
 
 const badges = [
@@ -75,21 +87,9 @@ const badges = [
   },
   {
     icon: <MdSchool />,
-    info: 'mjenrungrot[at]hmc.edu',
-    link: 'mailto:mjenrungrot[at]hmc.edu',
+    info: 'tjenrung [at] cs.washington.edu',
+    link: 'mailto:tjenrung [at] cs.washington.edu',
     type: 'E-mail (School)',
-  },
-  {
-    icon: <MdEmail />,
-    info: 'mek.1803[at]gmail.com',
-    link: 'mailto:mek.1803[at]gmail.com',
-    type: 'E-mail (Personal)',
-  },
-  {
-    icon: <MdPhone />,
-    info: '+1-617-417-5653',
-    link: null,
-    type: 'Phone',
   },
 ];
 
@@ -124,8 +124,33 @@ export class Info extends React.Component {
    * @return {object} info component
    */
   render() {
-    const {classes} = this.props;
+    const {classes, showContact} = this.props;
     const {expanded} = this.state;
+
+    const contactPaper = (
+      <Paper className={classes.root} elevation={1}>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Contact
+        </Typography>
+        <Divider />
+        <List className={classes.badges}>
+          {badges.map((badge) => (
+            <div key={badge.type}>
+              <a href={badge.link} className={classes.linkText}>
+                <ListItem button>
+                  <Avatar>{badge.icon}</Avatar>
+                  <ListItemText
+                    className={classes.contactListItemText}
+                    secondary={badge.type}>
+                    {badge.info}
+                  </ListItemText>
+                </ListItem>
+              </a>
+            </div>
+          ))}
+        </List>
+      </Paper>
+    );
 
     return (
       <div>
@@ -148,32 +173,31 @@ export class Info extends React.Component {
                 <ExpandMoreIcon />
               </IconButton>
             }
-            title="Teerapat Jenrungrot"
-            subheader="Harvey Mudd College, BSc in Computer Science (2019)"
-          />
+            title={(<div>Teerapat Jenrungrot</div>)}
+            subheader={(
+              <div>
+                University of Washington, PhD in Computer Science (2019-) <br />
+                Harvey Mudd College, BSc in Computer Science (2015-2019)
+              </div>
+            )}
+          >
+            <Typography>htehekohkes</Typography>
+          </CardHeader>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
-            {/* <CardMedia /> */}
             <CardContent>
-              <Typography component="p" gutterBottom>
-                I&apos;m a computer scientist who is passionate about deep
-                learning particularly in the intersection of computer vision
-                and audio signal processing.
-              </Typography>
-              <Typography component="p" gutterBottom>
-                I did a lot of C/C++, Python, JavaScript, and LaTeX. I also knew
-                SystemVerilog. During my free time, I explored Japanese language
-                and competitive programming.
-              </Typography>
               <Button
                 variant="contained"
                 color="primary"
                 className={classes.button}
               >
-                <Typography variant="subtitle1">
-                  <Link to={CV} target="_self">
-                    CV
-                  </Link>
-                </Typography>
+                <Link to={CV} target="_self">
+                  <Typography
+                    variant="subtitle1"
+                    className={classes.cvButtonText}
+                  >
+                      CV
+                  </Typography>
+                </Link>
               </Button>
               <Button
                 variant="contained"
@@ -181,31 +205,17 @@ export class Info extends React.Component {
                 className={classes.button}
                 disabled
               >
-                <Typography variant="subtitle1">Resume</Typography>
+                <Typography
+                  variant="subtitle1"
+                  className={classes.resumeButtonText}
+                >
+                  Resume
+                </Typography>
               </Button>
             </CardContent>
           </Collapse>
         </Card>
-        <Paper className={classes.root} elevation={1}>
-          <Typography variant="h5" component="h2" gutterBottom>
-            Contact
-          </Typography>
-          <Divider />
-          <List className={classes.badges}>
-            {badges.map((badge) => (
-              <div key={badge.type}>
-                <a href={badge.link} className={classes.linkText}>
-                  <ListItem button>
-                    <Avatar>{badge.icon}</Avatar>
-                    <ListItemText secondary={badge.type}>
-                      {badge.info}
-                    </ListItemText>
-                  </ListItem>
-                </a>
-              </div>
-            ))}
-          </List>
-        </Paper>
+        {showContact ? contactPaper : null}
       </div>
     );
   }
@@ -213,6 +223,7 @@ export class Info extends React.Component {
 
 Info.propTypes = {
   classes: PropTypes.object.isRequired,
+  showContact: PropTypes.bool,
 };
 
 export default withStyles(styles)(Info);

@@ -66,29 +66,29 @@ const styles = (theme) => ({
 
 const drawerConfig = [
   {
-    text: 'Main',
+    text: 'Home',
     icon: <InboxIcon />,
     linkto: '/',
   },
   {
-    text: 'Work Experiences',
+    text: 'About',
     icon: <BusinessIcon />,
-    linkto: '/works',
+    linkto: '/about',
   },
   {
-    text: 'Publications',
+    text: 'Research',
     icon: <SchoolIcon />,
-    linkto: '/publications',
-  },
-  {
-    text: 'Projects',
-    icon: <PublicIcon />,
-    linkto: '/projects',
+    linkto: '/research',
   },
   {
     text: 'Blogs',
     icon: <NotesIcon />,
     linkto: '/blogs',
+  },
+  {
+    text: 'Contact',
+    icon: <PublicIcon />,
+    linkto: '/contact',
   },
   {
     text: 'Experimental Section',
@@ -109,6 +109,7 @@ class Main extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
+      selectedTab: props.selectedTab ? props.selectedTab : '/',
     };
   }
 
@@ -160,64 +161,137 @@ class Main extends React.Component {
       </div>
     );
 
-    return (
-      <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-              onClick={this.toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Tabs
-              indicatorColor="primary"
-              textColor="primary"
-            >
-              <Tab label="Home" />
-              <Tab label="About" />
-              <Tab label="Research" />
-              <Tab label="Blog" />
-              <Tab label="Contact" />
-            </Tabs>
-          </Toolbar>
-        </AppBar>
-        <SwipeableDrawer
-          open={this.state.isOpen}
-          onClose={this.toggleDrawer(false)}
-          onOpen={this.toggleDrawer(true)}
+    // eslint-disable-next-line no-unused-vars
+    const swipeableDrawer = (
+      <SwipeableDrawer
+        open={this.state.isOpen}
+        onClose={this.toggleDrawer(false)}
+        onOpen={this.toggleDrawer(true)}
+      >
+        <div
+          tabIndex={0}
+          role="button"
+          onClick={this.toggleDrawer(false)}
+          onKeyDown={this.toggleDrawer(false)}
         >
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer(false)}
-            onKeyDown={this.toggleDrawer(false)}
-          >
-            {sideList}
-          </div>
-        </SwipeableDrawer>
-        <div className={classes.leftPanel}>
-          <div className={classes.toolbar} />
-          <Info />
+          {sideList}
         </div>
-        <main className={classes.canvas}>
-          <div className={classes.toolbar} />
-          {this.props.children}
-        </main>
-      </div>
+      </SwipeableDrawer>
     );
+
+    const handleChangeTab = (event, newValue) => {
+      this.setState({
+        ...this.state,
+        selectedTab: newValue,
+      });
+    };
+
+    const header = (
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar>
+          <IconButton
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="Menu"
+            onClick={this.toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Tabs
+            onChange={handleChangeTab}
+            value={this.state.selectedTab}
+          >
+            <Tab
+              value={'/'}
+              label="Home"
+              component={Link}
+              to={'/'}
+            />
+            <Tab
+              value={'/about'}
+              label="About"
+              component={Link}
+              to={'/about'}
+            />
+            <Tab
+              value={'/research'}
+              label="Research"
+              component={Link}
+              to={'/research'}
+            />
+            <Tab
+              value={'/blogs'}
+              label="Blogs"
+              component={Link}
+              to={'/blogs'}
+            />
+            <Tab value={'/contact'}
+              label="Contact"
+              component={Link}
+              to={'/contact'}
+            />
+          </Tabs>
+        </Toolbar>
+      </AppBar>
+    );
+
+    const infoBar = (showContact) => {
+      if (showContact) {
+        return (
+          <div className={classes.leftPanel}>
+            <div className={classes.toolbar} />
+            <Info showContact />
+          </div>
+        );
+      } else {
+        return (
+          <div className={classes.leftPanel}>
+            <div className={classes.toolbar} />
+            <Info />
+          </div>
+        );
+      }
+    };
+
+    const mainContent = (
+      <main className={classes.canvas}>
+        <div className={classes.toolbar} />
+        {this.props.children}
+      </main>
+    );
+
+    if (this.props.infoBar) {
+      return (
+        <div className={classes.root}>
+          {header}
+          {swipeableDrawer}
+          {infoBar(this.props.showContact)}
+          {mainContent}
+        </div>
+      );
+    } else {
+      return (
+        <div className={classes.root}>
+          {header}
+          {swipeableDrawer}
+          {mainContent}
+        </div>
+      );
+    }
   }
 }
 
 Main.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.object.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  infoBar: PropTypes.bool,
+  showContact: PropTypes.bool,
 };
 
 Main.defaultProps = {
   children: null,
+  infoBar: false,
 };
 
 export default withStyles(styles)(Main);
