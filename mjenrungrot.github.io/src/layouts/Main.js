@@ -283,7 +283,7 @@ class Main extends React.Component {
 
 Main.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.object.isRequired,
+  children: PropTypes.any.isRequired,
   selectedTab: PropTypes.string.isRequired,
   infoBar: PropTypes.bool,
   showContact: PropTypes.bool,
@@ -292,6 +292,7 @@ Main.propTypes = {
 Main.defaultProps = {
   children: null,
   infoBar: false,
+  selectedTab: '/',
 };
 
 export default withStyles(styles)(Main);

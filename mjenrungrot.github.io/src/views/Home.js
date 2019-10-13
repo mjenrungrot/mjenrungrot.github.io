@@ -33,7 +33,7 @@ function Home(props) {
   const {classes} = props;
   return (
     <Main selectedTab="/">
-      <Fade in="true">
+      <Fade in>
         <Paper className={classes.root}>
           <Typography variant="h5" component="h3" gutterBottom>
             About this site
@@ -55,7 +55,7 @@ function Home(props) {
 }
 
 Home.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.any.isRequired,
 };
 
 export default withStyles(styles)(Home);

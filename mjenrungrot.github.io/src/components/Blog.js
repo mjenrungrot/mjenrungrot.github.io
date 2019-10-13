@@ -119,7 +119,7 @@ function Blog(props) {
           </Paper>
           {/* End main featured post */}
           {/* Sub featured posts */}
-          <Grid container spacing={40} className={classes.cardGrid}>
+          <Grid container spacing={5} className={classes.cardGrid}>
             {featuredPosts.map((post) => (
               <Grid item key={post.title} xs={12} md={6}>
                 <Card className={classes.card}>

@@ -74,7 +74,7 @@ function Contact(props) {
 }
 
 Contact.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.any.isRequired,
 };
 
 export default withStyles(styles)(Contact);

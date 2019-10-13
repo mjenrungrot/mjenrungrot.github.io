@@ -95,7 +95,7 @@ function About(props) {
 }
 
 About.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.any.isRequired,
 };
 
 export default withStyles(styles)(About);
