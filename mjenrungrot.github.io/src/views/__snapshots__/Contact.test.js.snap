@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact component renders 1`] = `
+<Contact
+  classes={
+    Object {
+      "address": "Contact-address-2",
+      "root": "Contact-root-1",
+    }
+  }
+/>
+`;

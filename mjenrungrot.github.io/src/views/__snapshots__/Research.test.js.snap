@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Research component renders 1`] = `
+<Research
+  classes={
+    Object {
+      "root": "Research-root-1",
+    }
+  }
+/>
+`;

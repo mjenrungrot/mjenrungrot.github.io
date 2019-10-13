@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blogs component renders 1`] = `
+<Blogs
+  classes={
+    Object {
+      "root": "Blogs-root-1",
+    }
+  }
+/>
+`;

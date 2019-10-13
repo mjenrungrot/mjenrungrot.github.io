@@ -1,17 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {MemoryRouter} from 'react-router-dom';
-
+import {shallow} from 'enzyme';
 import Research from './Research';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-      <MemoryRouter>
-        <Research />
-      </MemoryRouter>,
-      div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+describe('Research component', () => {
+  test('renders', () => {
+    const component = shallow(<Research />);
+    expect(component).toMatchSnapshot();
+  });
 });
