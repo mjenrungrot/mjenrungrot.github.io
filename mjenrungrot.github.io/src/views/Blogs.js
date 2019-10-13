@@ -33,7 +33,7 @@ function Blogs(props) {
 }
 
 Blogs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.any.isRequired,
 };
 
 export default withStyles(styles)(Blogs);
