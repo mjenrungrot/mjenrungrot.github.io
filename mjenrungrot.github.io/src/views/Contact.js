@@ -37,7 +37,7 @@ function Contact(props) {
       <Fade in>
         <Paper className={classes.root}>
           <Typography variant="h5" gutterBottom>
-            Conctact
+            Contact
           </Typography>
           <Divider />
           <Typography variant="body1" paragraph>
