@@ -1,7 +1,7 @@
 {
   "name": "mjenrungrot.github.io",
   "homepage": "https://mjenrungrot.github.io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.0",
