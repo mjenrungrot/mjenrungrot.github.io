@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // @flow
 
 // eslint-disable-next-line no-unused-vars
@@ -6,7 +5,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core/styles';
-// eslint-disable-next-line no-unused-vars
 import {Link} from 'react-router-dom';
 import {
   Paper,
@@ -25,7 +23,7 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {FaLinkedin, FaGithub} from 'react-icons/fa';
-import {MdSchool, MdEmail, MdPhone} from 'react-icons/md';
+import {MdSchool} from 'react-icons/md';
 
 // $FlowFixMe
 import CV from "../../data/cv.pdf"; // eslint-disable-line
