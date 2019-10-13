@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @flow
 
 // eslint-disable-next-line no-unused-vars
@@ -75,21 +76,9 @@ const badges = [
   },
   {
     icon: <MdSchool />,
-    info: 'mjenrungrot[at]hmc.edu',
-    link: 'mailto:mjenrungrot[at]hmc.edu',
+    info: 'tjenrung [at] cs.washington.edu',
+    link: 'mailto:tjenrung [at] cs.washington.edu',
     type: 'E-mail (School)',
-  },
-  {
-    icon: <MdEmail />,
-    info: 'mek.1803[at]gmail.com',
-    link: 'mailto:mek.1803[at]gmail.com',
-    type: 'E-mail (Personal)',
-  },
-  {
-    icon: <MdPhone />,
-    info: '+1-617-417-5653',
-    link: null,
-    type: 'Phone',
   },
 ];
 
@@ -124,8 +113,31 @@ export class Info extends React.Component {
    * @return {object} info component
    */
   render() {
-    const {classes} = this.props;
+    const {classes, showContact} = this.props;
     const {expanded} = this.state;
+
+    const contactPaper = (
+      <Paper className={classes.root} elevation={1}>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Contact
+        </Typography>
+        <Divider />
+        <List className={classes.badges}>
+          {badges.map((badge) => (
+            <div key={badge.type}>
+              <a href={badge.link} className={classes.linkText}>
+                <ListItem button>
+                  <Avatar>{badge.icon}</Avatar>
+                  <ListItemText secondary={badge.type}>
+                    {badge.info}
+                  </ListItemText>
+                </ListItem>
+              </a>
+            </div>
+          ))}
+        </List>
+      </Paper>
+    );
 
     return (
       <div>
@@ -186,26 +198,7 @@ export class Info extends React.Component {
             </CardContent>
           </Collapse>
         </Card>
-        <Paper className={classes.root} elevation={1}>
-          <Typography variant="h5" component="h2" gutterBottom>
-            Contact
-          </Typography>
-          <Divider />
-          <List className={classes.badges}>
-            {badges.map((badge) => (
-              <div key={badge.type}>
-                <a href={badge.link} className={classes.linkText}>
-                  <ListItem button>
-                    <Avatar>{badge.icon}</Avatar>
-                    <ListItemText secondary={badge.type}>
-                      {badge.info}
-                    </ListItemText>
-                  </ListItem>
-                </a>
-              </div>
-            ))}
-          </List>
-        </Paper>
+        {showContact ? contactPaper : null}
       </div>
     );
   }
@@ -213,6 +206,7 @@ export class Info extends React.Component {
 
 Info.propTypes = {
   classes: PropTypes.object.isRequired,
+  showContact: PropTypes.bool,
 };
 
 export default withStyles(styles)(Info);

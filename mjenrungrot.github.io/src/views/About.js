@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
 
 import {withStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Fade from '@material-ui/core/Fade';
+import Typography from '@material-ui/core/Typography';
 
 import Main from '../layouts/Main';
 
@@ -19,27 +19,24 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
   },
-  paperFade: {
-    in: true,
-  },
 });
 
 /**
- * Index View Component
+ * About View Component
  * @param {object} props creation params
  * @return {object} Index component
  */
-function Index(props) {
+function About(props) {
   const {classes} = props;
   return (
-    <Main selectedTab="/">
+    <Main selectedTab="/about" infoBar>
       <Fade in="true">
         <Paper className={classes.root}>
           <Typography variant="h5" component="h3" gutterBottom>
             About this site
           </Typography>
           <Typography component="p" gutterBottom>
-            Welcome to my personal website.
+            Hello to my personal website.
           </Typography>
           <Typography component="p" gutterBottom>
             Source available at{' '}
@@ -54,8 +51,8 @@ function Index(props) {
   );
 }
 
-Index.propTypes = {
+About.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Index);
+export default withStyles(styles)(About);

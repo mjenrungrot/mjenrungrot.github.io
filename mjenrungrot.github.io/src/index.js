@@ -13,7 +13,9 @@ import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 // Pages
 import Index from './views/Index';
+import About from './views/About';
 import Works from './views/Works';
+import Contact from './views/Contact';
 import Publications from './views/Publications';
 import Projects from './views/Projects';
 import Blogs from './views/Blogs';
@@ -78,7 +80,9 @@ class App extends React.Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Index} />
+            <Route path="/about" component={About} />
             <Route path="/works" component={Works} />
+            <Route path="/contact" component={Contact} />
             <Route path="/publications" component={Publications} />
             <Route path="/projects" component={Projects} />
             <Route path="/blogs" component={Blogs} />

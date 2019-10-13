@@ -235,12 +235,23 @@ class Main extends React.Component {
       </AppBar>
     );
 
-    const infoBar = (
-      <div className={classes.leftPanel}>
-        <div className={classes.toolbar} />
-        <Info />
-      </div>
-    );
+    const infoBar = (showContact) => {
+      if (showContact) {
+        return (
+          <div className={classes.leftPanel}>
+            <div className={classes.toolbar} />
+            <Info showContact />
+          </div>
+        );
+      } else {
+        return (
+          <div className={classes.leftPanel}>
+            <div className={classes.toolbar} />
+            <Info />
+          </div>
+        );
+      }
+    };
 
     const mainContent = (
       <main className={classes.canvas}>
@@ -249,14 +260,24 @@ class Main extends React.Component {
       </main>
     );
 
-    return (
-      <div className={classes.root}>
-        {header}
-        {/* {swipeableDrawer} */}
-        {infoBar}
-        {mainContent}
-      </div>
-    );
+    if (this.props.infoBar) {
+      return (
+        <div className={classes.root}>
+          {header}
+          {/* {swipeableDrawer} */}
+          {infoBar(this.props.showContact)}
+          {mainContent}
+        </div>
+      );
+    } else {
+      return (
+        <div className={classes.root}>
+          {header}
+          {/* {swipeableDrawer} */}
+          {mainContent}
+        </div>
+      );
+    }
   }
 }
 
@@ -264,10 +285,13 @@ Main.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.object.isRequired,
   selectedTab: PropTypes.string.isRequired,
+  infoBar: PropTypes.bool,
+  showContact: PropTypes.bool,
 };
 
 Main.defaultProps = {
   children: null,
+  infoBar: false,
 };
 
 export default withStyles(styles)(Main);
