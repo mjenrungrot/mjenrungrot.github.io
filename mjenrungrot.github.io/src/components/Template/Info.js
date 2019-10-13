@@ -158,22 +158,18 @@ export class Info extends React.Component {
                 <ExpandMoreIcon />
               </IconButton>
             }
-            title="Teerapat Jenrungrot"
-            subheader="Harvey Mudd College, BSc in Computer Science (2019)"
-          />
+            title={(<div>Teerapat Jenrungrot</div>)}
+            subheader={(
+              <div>
+                University of Washington, PhD in Computer Science (2019-) <br />
+                Harvey Mudd College, BSc in Computer Science (2015-2019)
+              </div>
+            )}
+          >
+            <Typography>htehekohkes</Typography>
+          </CardHeader>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
-            {/* <CardMedia /> */}
             <CardContent>
-              <Typography component="p" gutterBottom>
-                I&apos;m a computer scientist who is passionate about deep
-                learning particularly in the intersection of computer vision
-                and audio signal processing.
-              </Typography>
-              <Typography component="p" gutterBottom>
-                I did a lot of C/C++, Python, JavaScript, and LaTeX. I also knew
-                SystemVerilog. During my free time, I explored Japanese language
-                and competitive programming.
-              </Typography>
               <Button
                 variant="contained"
                 color="primary"

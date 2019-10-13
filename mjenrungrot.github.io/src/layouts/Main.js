@@ -221,7 +221,7 @@ class Main extends React.Component {
             />
             <Tab
               value={'/blogs'}
-              label="Blog"
+              label="Blogs"
               component={Link}
               to={'/blogs'}
             />
