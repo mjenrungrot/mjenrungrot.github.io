@@ -88,7 +88,7 @@ const badges = [
   {
     icon: <MdSchool />,
     info: 'tjenrung [at] cs.washington.edu',
-    link: 'mailto:tjenrung [at] cs.washington.edu',
+    link: 'mailto:tjenrung[at]cs[dot]washington[dot]edu',
     type: 'E-mail (School)',
   },
 ];
@@ -116,6 +116,15 @@ export class Info extends React.Component {
   handleExpandClick() {
     this.setState((state, props) => ({
       expanded: !state.expanded,
+    }));
+  }
+
+  /**
+   * handleOnLoad()
+   */
+  componentDidMount() {
+    this.setState((state, props) => ({
+      expanded: true,
     }));
   }
 
