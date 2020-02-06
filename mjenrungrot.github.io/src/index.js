@@ -54,6 +54,11 @@ const theme = createMuiTheme({
         backgroundColor: '#1492ff',
       },
     },
+    MuiLink: {
+      root: {
+        color: '#1492ff',
+      },
+    },
   },
 });
 

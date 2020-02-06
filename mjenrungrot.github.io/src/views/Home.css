@@ -1,0 +1,19 @@
+main a:link {
+  color: #1492ff;
+  text-decoration: none;
+}
+
+main a:visited {
+  color: #1492ff;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #1492ff;
+  text-decoration: underline;
+}
+
+main a:active {
+  color: #0075dc;
+  text-decoration: underline;
+}
