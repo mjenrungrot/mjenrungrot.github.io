@@ -55,7 +55,7 @@ function About(props) {
             <Typography paragraph>
               Teerapat completed his BS degree in Computer Science
               (Sep 2015 - May 2019) from <a href='https://www.hmc.edu'>Harvey Mudd College</a>
-              where he worked on various projects in computer science,
+              &nbsp;where he worked on various projects in computer science,
               engineering, and mathematics. During his time at Harvey
               Mudd, Teerapat worked under
               Prof. <a href="http://pages.hmc.edu/ttsai/">Timothy Tsai</a> (Music Information Retrieval),
@@ -83,7 +83,7 @@ function About(props) {
               reading light novels. Currently, he knows
               Thai, English, Japanese, and Korean. In his
               free time, he loves to cook new recipes and
-              thinking about cool ideas to work on. He is
+              think about cool ideas to work on. He is
               also interested in applied ethics on areas
               related to CS technology.
             </Typography>

@@ -27,6 +27,7 @@ import {MdSchool} from 'react-icons/md';
 
 // $FlowFixMe
 import CV from "../../data/cv.pdf"; // eslint-disable-line
+import resume from "../../data/resume.pdf"; // eslint-disable-line
 
 const styles = (theme) => ({
   root: {
@@ -88,7 +89,7 @@ const badges = [
   {
     icon: <MdSchool />,
     info: 'tjenrung [at] cs.washington.edu',
-    link: 'mailto:tjenrung [at] cs.washington.edu',
+    link: 'mailto:tjenrung[at]cs[dot]washington[dot]edu',
     type: 'E-mail (School)',
   },
 ];
@@ -116,6 +117,15 @@ export class Info extends React.Component {
   handleExpandClick() {
     this.setState((state, props) => ({
       expanded: !state.expanded,
+    }));
+  }
+
+  /**
+   * componentDidMount()
+   */
+  componentDidMount() {
+    this.setState((state, props) => ({
+      expanded: true,
     }));
   }
 
@@ -184,13 +194,15 @@ export class Info extends React.Component {
             <Typography>htehekohkes</Typography>
           </CardHeader>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <Divider />
             <CardContent>
               <Button
                 variant="contained"
                 color="primary"
                 className={classes.button}
+                disabled
               >
-                <Link to={CV} target="_self">
+                <Link to={CV} target="_blank">
                   <Typography
                     variant="subtitle1"
                     className={classes.cvButtonText}
@@ -203,14 +215,15 @@ export class Info extends React.Component {
                 variant="contained"
                 color="primary"
                 className={classes.button}
-                disabled
               >
-                <Typography
-                  variant="subtitle1"
-                  className={classes.resumeButtonText}
-                >
-                  Resume
-                </Typography>
+                <Link to={resume} target="_blank">
+                  <Typography
+                    variant="subtitle1"
+                    className={classes.resumeButtonText}
+                  >
+                    Resume
+                  </Typography>
+                </Link>
               </Button>
             </CardContent>
           </Collapse>

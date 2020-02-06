@@ -4,7 +4,13 @@ exports[`Research component renders 1`] = `
 <Research
   classes={
     Object {
-      "root": "Research-root-1",
+      "card": "Research-card-3",
+      "cardContent": "Research-cardContent-4",
+      "content": "Research-content-2",
+      "cover": "Research-cover-5",
+      "details": "Research-details-6",
+      "header": "Research-header-1",
+      "researchList": "Research-researchList-7",
     }
   }
 />
