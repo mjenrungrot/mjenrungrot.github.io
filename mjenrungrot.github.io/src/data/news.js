@@ -4,6 +4,11 @@
 const data = [
   {
     date: 'February 2020',
+    caption: 'Conference paper `A Board and Projects for an FPGA/Microcontroller-Based Embedded Systems Lab` accepted as a regular paper and oral presentation for GLSVLSI 2020',
+    link: null,
+  },
+  {
+    date: 'February 2020',
     caption: 'Journal paper `Using Cell Phone Pictures of Sheet Music To Retrieve MIDI Passages` accepted to IEEE Transactions on Multimedia',
     link: null,
   },
