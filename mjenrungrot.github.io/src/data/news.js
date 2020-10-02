@@ -3,6 +3,11 @@
 
 const data = [
   {
+    date: 'September 2020',
+    caption: 'Conference paper `The Cone of Silence: Speech Separation by Localization` accepted as an oral paper for NeurIPS 2020',
+    link: 'https://grail.cs.washington.edu/projects/cone-of-silence/',
+  },
+  {
     date: 'February 2020',
     caption: 'Conference paper `A Board and Projects for an FPGA/Microcontroller-Based Embedded Systems Lab` accepted as a regular paper and oral presentation for GLSVLSI 2020',
     link: null,

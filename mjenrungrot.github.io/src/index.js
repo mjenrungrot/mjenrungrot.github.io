@@ -59,6 +59,11 @@ const theme = createMuiTheme({
         color: '#1492ff',
       },
     },
+    MuiCardMedia: {
+      root: {
+        backgroundSize: 'contain',
+      },
+    },
   },
 });
 
