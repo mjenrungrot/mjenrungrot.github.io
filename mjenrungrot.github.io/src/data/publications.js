@@ -19,11 +19,11 @@ const data = [
     code: 'https://github.com/vivjay30/Cone-of-Silence',
     desc:
       `
-      Harvey Mudd College has developed a sixth-generation circuit board
-      with an FPGA and microcontroller for an embedded systems laboratory course.
-      Students begin by assembling and testing their circuit board, then
-      complete a series of laboratory projects with the chips. The course
-      concludes withan open-ended team-based design project.`,
+      Our method performs source separation and localization for human speakers.
+      Key features include handling an arbitary number of speakers and moving speakers
+      with a single network. This code allows you to run and evaluate our method on
+      synthetically rendered data. If you have a multi-microphone array, you can also
+      obtain real results like the ones in our demo video.`,
   },
   {
     title: 'A Board and Projects for an FPGA/Microcontroller-Based Embedded Systems Lab',
