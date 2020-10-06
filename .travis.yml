@@ -12,13 +12,13 @@ git:
 before_install:
   - echo -e "machine git.overleaf.com\n  login $OVERLEAF_USER\n  password $OVERLEAF_PASSWD" > ~/.netrc
   - git submodule update --init --recursive
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends luatex
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-luatex
 install:
   - cd mjenrungrot.github.io
   - npm install
 script:
   - cd src/overleaf
-  - luatex --interaction=nonstopmode --halt-on-error cv.tex
+  - lualatex --interaction=nonstopmode --halt-on-error cv.tex
   - cd ../..
   - npm test                      # Test
   - npm run build                 # Build for pre-deploying
