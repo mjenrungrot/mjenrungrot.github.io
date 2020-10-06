@@ -10,7 +10,7 @@ cache:
 git:
   submodules: false
 before_install:
-  - echo -e "machine overleaf.com\n  login $OVERLEAF_USER\n  password $OVERLEAF_PASSWD" > ~/.netrc
+  - echo -e "machine git.overleaf.com\n  login $OVERLEAF_USER\n  password $OVERLEAF_PASSWD" > ~/.netrc
   - git submodule update --init --recursive
   - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 install:
