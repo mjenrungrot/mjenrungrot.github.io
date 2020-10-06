@@ -1,6 +1,6 @@
 arch: amd64
 os: linux
-dist: focal
+dist: xenial
 language: node_js
 node_js:
   - "stable"
