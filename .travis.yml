@@ -12,12 +12,14 @@ git:
 before_install:
   - echo -e "machine git.overleaf.com\n  login $OVERLEAF_USER\n  password $OVERLEAF_PASSWD" > ~/.netrc
   - git submodule update --init --recursive
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends luatex
 install:
   - cd mjenrungrot.github.io
   - npm install
 script:
-  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory src/overleaf src/overleaf/cv.tex
+  - cd src/overleaf
+  - luatex --interaction=nonstopmode --halt-on-error cv.tex
+  - cd ../..
   - npm test                      # Test
   - npm run build                 # Build for pre-deploying
 deploy:                           # Deploy to surge [latest branch]
