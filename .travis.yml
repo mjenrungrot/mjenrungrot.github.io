@@ -14,7 +14,7 @@ install:
   - cd mjenrungrot.github.io
   - npm install
 script:
-  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory src/overleaf srf/overleaf/cv.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory src/overleaf src/overleaf/cv.tex
   - npm test                      # Test
   - npm run build                 # Build for pre-deploying
 deploy:                           # Deploy to surge [latest branch]
