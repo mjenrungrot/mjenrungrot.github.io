@@ -1,15 +1,17 @@
 arch: amd64
 os: linux
 dist: focal
-root: required
 language: node_js
 node_js:
   - "stable"
 cache:
   directories:
     - node_modules
+git:
+  submodules: false
 before_install:
   - echo -e "machine overleaf.com\n  login $OVERLEAF_USER\n  password $OVERLEAF_PASSWD" > ~/.netrc
+  - git submodule update --init --recursive
   - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 install:
   - cd mjenrungrot.github.io
