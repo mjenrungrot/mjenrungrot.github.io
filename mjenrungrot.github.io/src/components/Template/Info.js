@@ -196,34 +196,34 @@ export class Info extends React.Component {
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <Divider />
             <CardContent>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-              >
-                <Link to={CV} target="_blank">
+              <Link to={CV} target="_blank">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.button}
+                >
                   <Typography
                     variant="subtitle1"
                     className={classes.cvButtonText}
                   >
                       CV
                   </Typography>
-                </Link>
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-              >
-                <Link to={resume} target="_blank">
+                </Button>
+              </Link>
+              <Link to={resume} target="_blank">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.button}
+                >
                   <Typography
                     variant="subtitle1"
                     className={classes.resumeButtonText}
                   >
                     Resume
                   </Typography>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </CardContent>
           </Collapse>
         </Card>
