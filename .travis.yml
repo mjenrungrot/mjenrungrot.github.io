@@ -24,6 +24,7 @@ script:
   - npm test                      # Test
   - npm run build                 # Build for pre-deploying
 deploy:                           # Deploy to surge [latest branch]
+  skip_cleanup: true
   - provider: surge
     domain: mjenrungrot.surge.sh
     project: ./mjenrungrot.github.io/build
