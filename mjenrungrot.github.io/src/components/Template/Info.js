@@ -200,7 +200,6 @@ export class Info extends React.Component {
                 variant="contained"
                 color="primary"
                 className={classes.button}
-                disabled
               >
                 <Link to={CV} target="_blank">
                   <Typography
