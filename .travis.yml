@@ -12,16 +12,17 @@ git:
 before_install:
   - echo -e "machine git.overleaf.com\n  login $OVERLEAF_USER\n  password $OVERLEAF_PASSWD" > ~/.netrc
   - git submodule update --init --recursive
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-luatex
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-luatex texlive-xetex texlive-fonts-extra fonts-lmodern
 install:
   - cd mjenrungrot.github.io
   - npm install
 script:
+  - npm test                      # Test
+  - npm run build                 # Build for pre-deploying
   - cd src/overleaf
   - lualatex --interaction=nonstopmode --halt-on-error cv.tex
   - cd ../..
-  - npm test                      # Test
-  - npm run build                 # Build for pre-deploying
+  - cp src/overleaf/cv.pdf build/src/data/cv.pdf
 deploy:                           # Deploy to surge [latest branch]
   - provider: surge
     domain: mjenrungrot.surge.sh
