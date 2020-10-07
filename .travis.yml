@@ -17,11 +17,12 @@ install:
   - cd mjenrungrot.github.io
   - npm install
 script:
+  - npm test                      # Test
+  - npm run build                 # Build for pre-deploying
   - cd src/overleaf
   - lualatex --interaction=nonstopmode --halt-on-error cv.tex
   - cd ../..
-  - npm test                      # Test
-  - npm run build                 # Build for pre-deploying
+  - cp src/overleaf/cv.pdf build/src/data/cv.pdf
 deploy:                           # Deploy to surge [latest branch]
   - provider: surge
     domain: mjenrungrot.surge.sh
