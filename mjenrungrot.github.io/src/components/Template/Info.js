@@ -16,6 +16,7 @@ import {
   ListItemText,
   Card,
   CardHeader,
+  CardMedia,
   CardContent,
   Collapse,
   Button,
@@ -70,6 +71,12 @@ const styles = (theme) => ({
   resumeButtonText: {
     color: '#1492ff',
     textDecoration: 'none',
+  },
+  pic: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+    backgroundSize: 'cover',
+    backgroundPosition: 'top',
   },
 });
 
@@ -191,8 +198,11 @@ export class Info extends React.Component {
               </div>
             )}
           >
-            <Typography>htehekohkes</Typography>
           </CardHeader>
+          <CardMedia
+            className={classes.pic}
+            image="https://www.cs.hmc.edu/~montanez/images/mek.jpg"
+          />
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <Divider />
             <CardContent>
@@ -210,7 +220,7 @@ export class Info extends React.Component {
                   </Typography>
                 </Button>
               </Link>
-              <Link to={resume} target="_blank">
+              {/* <Link to={resume} target="_blank">
                 <Button
                   variant="contained"
                   color="primary"
@@ -223,7 +233,7 @@ export class Info extends React.Component {
                     Resume
                   </Typography>
                 </Button>
-              </Link>
+              </Link> */}
             </CardContent>
           </Collapse>
         </Card>
