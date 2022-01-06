@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Container from "@components/Container";
+import Nav from "@components/Nav";
 
 import styles from "@styles/Home.module.css";
 
@@ -20,6 +21,11 @@ const Layout: React.FC<LayoutProps> = ({
       <Head>
         <title>{title}</title>
       </Head>
+      <Nav
+        isOpen={isOpen}
+        onOpen={() => setIsOpen(true)}
+        onClose={() => setIsOpen(false)}
+      />
       <Container justifyContent="space-between" alignContent="space-between">
         {!isOpen && <main className={styles.main}>{children}</main>}
       </Container>
