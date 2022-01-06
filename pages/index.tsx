@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Container from "@components/Container";
 import Title from "@components/Title";
 import Text from "@components/Text";
-import Image from "@components/Image";
 
 import styles from "@styles/Home.module.css";
 

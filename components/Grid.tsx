@@ -16,11 +16,11 @@ import {
   BordersProps,
 } from "styled-system";
 
-export type GridProps = GridGrapProps &
+export type GridProps = GridGapProps &
   StyledGridProps &
   SpaceProps &
   LayoutProps &
-  FlexBoxProps &
+  FlexboxProps &
   BordersProps;
 
 const Grid = styled.div<GridProps>`

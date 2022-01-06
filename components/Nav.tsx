@@ -2,8 +2,6 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import Container from "@components/Container";
 import Grid from "@components/Grid";
-import Menu from "@icons/Menu";
-import Close from "@icons/Close";
 
 const states: { [key: string]: React.CSSProperties } = {
   "/": {
@@ -16,7 +14,7 @@ const states: { [key: string]: React.CSSProperties } = {
   },
   "/blog": {
     left: "157px",
-    wsidth: "55px",
+    width: "55px",
   },
   "/projects": {
     left: "224px",
@@ -106,7 +104,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
         </Grid>
       )}
 
-      <Container alignCenter="center" display={["none", "flex", "flex"]}>
+      <Container alignContent="center" display={["none", "flex", "flex"]}>
         <Grid
           width="fit-content"
           gridGap="2rem"
