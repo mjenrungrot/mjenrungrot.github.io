@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-json
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v2.5.1" # Use the sha / tag you want to point at
+    hooks:
+      - id: prettier
+  - repo: https://github.com/kontrolilo/kontrolilo
+    rev: v2.1.0
+    hooks:
+      - id: license-check-npm

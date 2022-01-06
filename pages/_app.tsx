@@ -1,11 +1,11 @@
 import { AppProps } from "next/app";
 import { motion } from "framer-motion";
-import Layout from "@components/layout";
+import Layout from "@components/Layout";
 
 import "@styles/global.css";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => (
-  <Layout home>
+  <Layout>
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
