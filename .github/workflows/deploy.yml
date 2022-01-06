@@ -17,10 +17,11 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn postbuild
+      - run: yarn export
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_branch: nextjs-gh-pages
-          build_dir: build
+          build_dir: out
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
