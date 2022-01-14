@@ -18,7 +18,7 @@ const Home = (): JSX.Element => (
     >
       <Container alignItems="center" alignContent="center">
         <Image
-          src="#"
+          src="https://nextjs.org/static/images/learn.png"
           alt="Teerapat Jenrungrot"
           width="120px"
           height="120px"
