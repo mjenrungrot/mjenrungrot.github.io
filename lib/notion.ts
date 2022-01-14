@@ -17,13 +17,13 @@ export const POSTS = {
 };
 
 export const EXPERIENCES = {
-  1: {
+  test1: {
     date: "2015",
-    uri: "259b1026f30f46b0ac976915fc828b81",
+    uri: "https://flying-reading-83e.notion.site/Getting-Started-on-Mobile-f0fe5328bc604173a310ffde6aa3afd1",
   },
-  2: {
+  test2: {
     date: "2017",
-    uri: "259b1026f30f46b0ac976915fc828b81",
+    uri: "https://flying-reading-83e.notion.site/Getting-Started-on-Mobile-f0fe5328bc604173a310ffde6aa3afd1",
   },
 };
 

@@ -6,7 +6,7 @@ import Text from "@components/Text";
 import Title from "@components/Title";
 import TransparentLink from "@components/TransparentLink";
 
-import { getPosts } from "../lib/notion";
+import { Post, getPosts } from "../lib/notion";
 
 interface AboutProps {
   experiences: Post[];
@@ -42,7 +42,7 @@ const About = ({ experiences }: AboutProps): JSX.Element => (
       <Container width="100%">
         {experiences.map(({ data }, i) => {
           console.log(data);
-          return <TransparentLink>{data.post}</TransparentLink>;
+          return <TransparentLink key={data.slug}>{data.post}</TransparentLink>;
         })}
 
         {/* <Grid
