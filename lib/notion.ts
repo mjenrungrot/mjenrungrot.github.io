@@ -9,13 +9,6 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const baseDir = path.join(process.cwd(), "./posts");
 
-export const POSTS = {
-  hello: {
-    date: "2015",
-    uri: "259b1026f30f46b0ac976915fc828b81",
-  },
-};
-
 export const EXPERIENCES = {
   test1: {
     date: "2015",
@@ -79,5 +72,3 @@ export const getPosts = (dir: string): Promise<Post[]> => {
     }),
   );
 };
-
-// v2
