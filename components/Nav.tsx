@@ -82,8 +82,8 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
       <Container display={["none", "none", "flex"]}>
         <NavLink href="/">Teerapat Jenrungrot</NavLink>
       </Container>
-
-      {/* <MenuContainer display={["flex", "none", "none"]}>
+      {/* 
+      <MenuContainer display={["flex", "none", "none"]}>
         {isOpen ? (
           <Close
             size="2rem"
