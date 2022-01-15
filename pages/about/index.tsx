@@ -100,8 +100,6 @@ const About = ({ experiences }: AboutProps): JSX.Element => (
             </TransparentLink>
           );
         })}
-
-        {/*  */}
       </Container>
     </Container>
   </Container>
