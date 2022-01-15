@@ -79,3 +79,5 @@ export const getPosts = (dir: string): Promise<Post[]> => {
     }),
   );
 };
+
+// v2
