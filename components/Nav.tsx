@@ -62,7 +62,6 @@ const Links = (): JSX.Element => (
 
 const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
   const [showModal, setShowModal] = React.useState(false);
-  const Calendly: any = false;
 
   const router = useRouter();
   let navStyle = states["/"];
@@ -169,6 +168,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
                 <Button
                   variant="secondary"
                   onClick={() => {
+                    // @ts-ignore: Unreachable code errors
                     Calendly.initPopupWidget({
                       url: "https://calendly.com/tjenrung/30min",
                     });
