@@ -62,6 +62,7 @@ const Links = (): JSX.Element => (
 
 const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
   const [showModal, setShowModal] = React.useState(false);
+  const Calendly: any = false;
 
   const router = useRouter();
   let navStyle = states["/"];
@@ -140,9 +141,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
         </Container>
 
         <Container alignContent="flex-end" display={["none", "none", "flex"]}>
-          <NavLink href="#" onClick={() => setShowModal(true)}>
-            Contact
-          </NavLink>
+          <NavLink onClick={() => setShowModal(true)}>Contact</NavLink>
           <Modal
             onClose={() => setShowModal(false)}
             show={showModal}

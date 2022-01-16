@@ -1,7 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "@components/Link";
+import Title, { TitleProps } from "@components/Title";
 import { MdClose } from "react-icons/md";
+
+export interface ModalProps {
+  show: boolean;
+  onClose: () => void;
+  children?: React.ReactNode;
+  title?: TitleProps;
+}
 
 const StyledModalBody = styled.div`
   padding-top: 10px;
@@ -12,6 +20,8 @@ const StyledModalBody = styled.div`
 const StyledModalTitle = styled.div`
   padding-left: 50px;
   padding-right: 50px;
+  font-size: 2rem;
+  text-align: left;
 `;
 
 const StyledModalHeader = styled.div`
@@ -41,7 +51,7 @@ const StyledModalOverlay = styled.div`
 `;
 
 const Modal: React.FC<ModalProps> = ({ show, onClose, children, title }) => {
-  const handleCloseClick = (e) => {
+  const handleCloseClick = (e: React.ChangeEvent<any>) => {
     e.preventDefault();
     onClose();
   };
