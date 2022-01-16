@@ -28,6 +28,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:title" content="Teerapat Jenrungrot" />
         <meta property="og:description" content="Description" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
