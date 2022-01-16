@@ -1,3 +1,4 @@
+import { SyntheticEvent, CSSProperties } from "react";
 import Head from "next/head";
 import {
   GetStaticPaths,
@@ -8,7 +9,13 @@ import {
 import Container from "@components/Container";
 
 import { NotionAPI } from "notion-client";
-import { NotionRenderer, NotionRendererProps, Code } from "react-notion-x";
+import {
+  NotionRenderer,
+  NotionRendererProps,
+  Code,
+  Collection,
+  CollectionRow,
+} from "react-notion-x";
 import { getPageInfo, Page, EXPERIENCES } from "../../lib/notion";
 
 interface BlogProps {
@@ -30,7 +37,51 @@ const About: NextPage<BlogProps> = ({ page, recordMap }) => (
       fullPage
       className="notion-container"
       recordMap={recordMap}
-      components={{ code: Code }}
+      customImages
+      components={{
+        image: ({
+          src,
+          alt,
+
+          height,
+          width,
+
+          className,
+          style,
+          loading,
+          decoding,
+
+          ref,
+          onLoad,
+        }: {
+          src: string;
+          alt: string;
+          height: number;
+          width: number;
+          className: string;
+          style: CSSProperties;
+          loading: string;
+          decoding: string;
+          ref: string;
+          onLoad: SyntheticEvent;
+        }) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={className}
+            style={style}
+            src={src}
+            ref={ref}
+            width={width}
+            height={height}
+            loading="lazy"
+            alt={alt}
+            decoding="async"
+          />
+        ),
+        collection: Collection,
+        collectionRow: CollectionRow,
+        code: Code,
+      }}
     />
   </Container>
 );
