@@ -122,6 +122,7 @@ export const getStaticProps = async ({
       page,
       recordMap,
     },
+    revalidate: 60,
   };
 };
 
