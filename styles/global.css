@@ -16,7 +16,6 @@ a {
   display: inline-block;
   transition: all 200ms ease;
   text-decoration: none;
-  /* border-bottom: 2px solid black; */
 }
 
 a:hover {
