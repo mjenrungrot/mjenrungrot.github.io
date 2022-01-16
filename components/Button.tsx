@@ -16,27 +16,27 @@ interface ButtonProps {
 
 const animation = keyframes`
   0% {
-    background-position: 0 50%
+    background-position: 0 50%;
   }
 
   20% {
-    background-position: 35% 80%
+    background-position: 35% 80%;
   }
 
   40% {
-    background-position: 100% 50%
+    background-position: 100% 50%;
   }
 
   60% {
-    background-position: 70% 0
+    background-position: 70% 0;
   }
 
   80% {
-    background-position: 70% 0
+    background-position: 70% 0;
   }
 
   100% {
-    background-position: 0 50%
+    background-position: 0 50%;
   }
 `;
 
