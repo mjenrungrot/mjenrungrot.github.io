@@ -3,7 +3,6 @@ import Container from "@components/Container";
 import Title from "@components/Title";
 import Text from "@components/Text";
 import Grid from "@components/Grid";
-
 import styles from "@styles/Home.module.css";
 
 const Home = (): JSX.Element => (
