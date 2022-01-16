@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "@components/Container";
 import Title from "@components/Title";
 import Text from "@components/Text";
+import Grid from "@components/Grid";
 
 import styles from "@styles/Home.module.css";
 
@@ -17,18 +18,34 @@ const Home = (): JSX.Element => (
       gridGap="4rem"
     >
       <Container alignItems="center" alignContent="center">
-        <Image
-          src="https://nextjs.org/static/images/learn.png"
-          alt="Teerapat Jenrungrot"
-          width="120px"
-          height="120px"
-          objectFit="cover"
-          className={styles.image}
-        />
-        <Title>Teerapat Jenrungrot</Title>
-        <Title fontSize="2rem" color="rgba(0,0,0,0.6)" fontWeight="500" as="h2">
-          AI Researcher (Audio + Computer Vision)
-        </Title>
+        <Grid
+          gridTemplateColumns="1fr 3.5fr"
+          justifyItems="flex-start"
+          gridGap="3rem"
+          paddingY="5rem"
+        >
+          <Container>
+            <Image
+              src="/me.png"
+              alt="Teerapat Jenrungrot"
+              width="160px"
+              height="160px"
+              objectFit="cover"
+              className={styles.image}
+            />
+          </Container>
+          <Container>
+            <Title>Teerapat Jenrungrot</Title>
+            <Title
+              fontSize="2rem"
+              color="rgba(0,0,0,0.6)"
+              fontWeight="500"
+              as="h2"
+            >
+              AI Researcher (Audio + Computer Vision)
+            </Title>
+          </Container>
+        </Grid>
       </Container>
 
       <Container maxWidth="700px" gridGap="3rem">

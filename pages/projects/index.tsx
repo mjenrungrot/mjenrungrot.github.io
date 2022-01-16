@@ -92,6 +92,7 @@ export const getStaticProps = async (): Promise<
     props: {
       projectsRecordMap: projectsRecordMap,
     },
+    revalidate: 60,
   };
 };
 

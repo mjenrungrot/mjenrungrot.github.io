@@ -10,13 +10,29 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 const baseDir = path.join(process.cwd(), "./posts");
 
 export const EXPERIENCES = {
-  test1: {
+  hmc: {
     date: "2015",
-    uri: "https://flying-reading-83e.notion.site/Getting-Started-on-Mobile-f0fe5328bc604173a310ffde6aa3afd1",
+    uri: "flying-reading-83e/Harvey-Mudd-College-e35ca23134e34c4e9d0426be54b55c56",
   },
-  test2: {
+  edr: {
+    date: "2016",
+    uri: "flying-reading-83e/EDR-6edb7c1e52f1400cb91d904cfc790265",
+  },
+  intel: {
     date: "2017",
-    uri: "https://flying-reading-83e.notion.site/Getting-Started-on-Mobile-f0fe5328bc604173a310ffde6aa3afd1",
+    uri: "flying-reading-83e/Intel-0e4adda997324c1da9be18c5ca50964e",
+  },
+  microsoft: {
+    date: "2017",
+    uri: "flying-reading-83e/Microsoft-82fd30a4a4c7474f9c1cd694b1fbf86a",
+  },
+  amazon: {
+    date: "2019",
+    uri: "flying-reading-83e/Amazon-07ab409b1af5448a8825960592191b50",
+  },
+  uw: {
+    date: "2020",
+    uri: "flying-reading-83e/University-of-Washington-628515ddda324c3b84312253aa0ef0e5",
   },
 };
 

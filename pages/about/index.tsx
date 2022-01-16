@@ -100,8 +100,6 @@ const About = ({ experiences }: AboutProps): JSX.Element => (
             </TransparentLink>
           );
         })}
-
-        {/*  */}
       </Container>
     </Container>
   </Container>
@@ -117,6 +115,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       experiences,
     },
+    revalidate: 60,
   };
 };
 
