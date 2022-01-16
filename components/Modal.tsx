@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import Link from "@components/Link";
 import Title, { TitleProps } from "@components/Title";
@@ -8,7 +8,7 @@ export interface ModalProps {
   show: boolean;
   onClose: () => void;
   children?: React.ReactNode;
-  title?: TitleProps;
+  title?: ReactElement;
 }
 
 const StyledModalBody = styled.div`
