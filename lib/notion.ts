@@ -14,6 +14,18 @@ export const EXPERIENCES = {
     date: "2015",
     uri: "flying-reading-83e/Harvey-Mudd-College-e35ca23134e34c4e9d0426be54b55c56",
   },
+  edr: {
+    date: "2016",
+    uri: "flying-reading-83e/EDR-6edb7c1e52f1400cb91d904cfc790265",
+  },
+  intel: {
+    date: "2017",
+    uri: "flying-reading-83e/Intel-0e4adda997324c1da9be18c5ca50964e",
+  },
+  microsoft: {
+    date: "2017",
+    uri: "flying-reading-83e/Microsoft-82fd30a4a4c7474f9c1cd694b1fbf86a",
+  },
   amazon: {
     date: "2019",
     uri: "flying-reading-83e/Amazon-07ab409b1af5448a8825960592191b50",
