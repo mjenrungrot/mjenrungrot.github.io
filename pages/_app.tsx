@@ -8,9 +8,6 @@ import "react-notion-x/src/styles.css";
 // used for collection views
 import "rc-dropdown/assets/index.css";
 
-// core styles for static tweet renderer
-import "react-static-tweets/styles.css";
-
 // used for equation
 import "katex/dist/katex.min.css";
 

@@ -4195,14 +4195,6 @@ react-script-tag@^1.1.2:
   resolved "https://registry.yarnpkg.com/react-script-tag/-/react-script-tag-1.1.2.tgz#be0fa3a22dfae8165d083f6bc1ff6f9799b20d44"
   integrity sha512-4oR9ntvGfX4igiP77vK310ru5Oa77xO7CeYB3Xi9lu0qsikpGpK1Kq1WMFocvy8U4fQFq8ovtrZS/8adfCziFw==
 
-react-static-tweets@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/react-static-tweets/-/react-static-tweets-0.5.4.tgz#3dc75f9fc50eff033ac65d85dcfec0ad1bd11888"
-  integrity sha512-7k+qq2YCum3buqfGA/jppYM9R59wnHPE4UU7Q35J6DwORnRyRVKs4RhFCSA5EjZa62ZckIzovqxe5KnftS5tbA==
-  dependencies:
-    classnames "^2.2.6"
-    swr "^1.0.0-beta.5"
-
 react-universal-interface@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/react-universal-interface/-/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"
@@ -4906,11 +4898,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
-
-swr@^1.0.0-beta.5:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-1.1.2.tgz#9f3de2541931fccf03c48f322f1fc935a7551612"
-  integrity sha512-UsM0eo5T+kRPyWFZtWRx2XR5qzohs/LS4lDC0GCyLpCYFmsfTk28UCVDbOE9+KtoXY4FnwHYiF+ZYEU3hnJ1lQ==
 
 text-table@^0.2.0:
   version "0.2.0"

@@ -3,6 +3,8 @@ import Head from "next/head";
 import Container from "@components/Container";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
+
+// @ts-ignore
 import ScriptTag from "react-script-tag";
 
 import styles from "@styles/Home.module.css";
