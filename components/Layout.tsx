@@ -4,9 +4,6 @@ import Container from "@components/Container";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
 
-// @ts-ignore
-import ScriptTag from "react-script-tag";
-
 import styles from "@styles/Home.module.css";
 
 type LayoutProps = {
@@ -50,7 +47,6 @@ const Layout: React.FC<LayoutProps> = ({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <ScriptTag type="text/javascript" src="./scripts/posthog.js" />
       </Head>
       <Nav
         isOpen={isOpen}
