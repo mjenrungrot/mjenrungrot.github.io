@@ -76,7 +76,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
   }
 
   return (
-    <>
+    <Container padding="0 2rem">
       <Head>
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
@@ -194,7 +194,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
           </Modal>
         </Container>
       </Grid>
-    </>
+    </Container>
   );
 };
 

@@ -81,9 +81,9 @@ const About = ({ experiences }: AboutProps): JSX.Element => (
                       justifyContent="flex-start"
                       gridGap="1rem"
                     >
-                      <Title fontSize="1.5rem" margin={0} as="h3">
+                      <Text color="black" fontSize="1.5rem" margin={0} as="h3">
                         {data.title}
-                      </Title>
+                      </Text>
                       <Text
                         fontSize="smaller"
                         margin={0}

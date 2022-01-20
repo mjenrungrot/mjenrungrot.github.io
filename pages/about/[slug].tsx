@@ -26,7 +26,7 @@ interface BlogProps {
 }
 
 const About: NextPage<BlogProps> = ({ page, recordMap }) => (
-  <Container marginBottom={["1rem", "4rem"]}>
+  <Container width="100%" marginBottom={["1rem", "4rem"]}>
     <Head>
       <title>{page.title}</title>
       <meta property="og:title" content={page.title} />

@@ -26,13 +26,14 @@ const Blog: NextPage<BlogProps> = ({ blogRecordMap }) => {
   };
 
   return (
-    <Container>
+    <Container width="100%" marginBottom={["1rem", "4rem"]} marginTop="0">
       <Head>
         <title>Blog</title>
         <meta property="og:title" content="Blog" />
       </Head>
       <NotionRenderer
         fullPage
+        className="notion-container"
         recordMap={blogRecordMap}
         mapPageUrl={customizedMapPageUrl()}
         customImages={true}

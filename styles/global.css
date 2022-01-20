@@ -55,19 +55,15 @@ a:hover {
   z-index: -100;
 }
 
-.notion-frame {
-  width: 100%;
-  height: 100%;
-}
-
 .notion-header {
   display: none;
 }
 
 .notion-container {
-  max-width: 100vw;
+  max-width: min(100vw, 1280px);
 }
 
 .notion-full-page {
+  width: 100%;
   padding-bottom: 0 !important;
 }

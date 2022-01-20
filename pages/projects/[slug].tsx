@@ -1,13 +1,14 @@
 import { SyntheticEvent, CSSProperties } from "react";
-import Head from "next/head";
-import Image from "next/image";
 import {
   GetStaticPaths,
   GetStaticPropsResult,
   GetStaticPropsContext,
   NextPage,
 } from "next";
+import Head from "next/head";
+import Image from "next/image";
 import Container from "@components/Container";
+
 import { NotionAPI } from "notion-client";
 import {
   NotionRenderer,
@@ -31,13 +32,14 @@ const Projects: NextPage<ProjectsProps> = ({ projectsRecordMap }) => {
   };
 
   return (
-    <Container>
+    <Container width="100%" marginBottom={["1rem", "4rem"]}>
       <Head>
         <title>Blog</title>
         <meta property="og:title" content="Blog" />
       </Head>
       <NotionRenderer
         fullPage
+        className="notion-container"
         recordMap={projectsRecordMap}
         mapPageUrl={customizedMapPageUrl()}
         customImages

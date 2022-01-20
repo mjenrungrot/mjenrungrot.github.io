@@ -25,13 +25,13 @@ import "@styles/global.css";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => (
   <Layout>
-    <motion.div
+    {/* <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
-    >
-      <Component {...pageProps} />
-    </motion.div>
+    > */}
+    <Component {...pageProps} />
+    {/* </motion.div> */}
   </Layout>
 );
 
