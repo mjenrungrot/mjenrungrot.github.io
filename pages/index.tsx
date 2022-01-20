@@ -56,9 +56,6 @@ const Home = (): JSX.Element => (
             Seattle.
           </Text>
         </Container>
-        {/* <Link href="/about">
-          <Button>More about me &rarr;</Button>
-        </Link> */}
       </Container>
     </Container>
   </Container>

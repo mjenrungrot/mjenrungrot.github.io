@@ -47,6 +47,11 @@ const Layout: React.FC<LayoutProps> = ({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "43dc622b79274d33a8b2355092e9bb3a"}'
+        ></script>
       </Head>
       <Nav
         isOpen={isOpen}
