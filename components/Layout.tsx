@@ -28,6 +28,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:title" content="Teerapat Jenrungrot" />
         <meta property="og:description" content="Description" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="./blank.png" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -46,6 +47,11 @@ const Layout: React.FC<LayoutProps> = ({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "43dc622b79274d33a8b2355092e9bb3a"}'
+        ></script>
       </Head>
       <Nav
         isOpen={isOpen}

@@ -15,6 +15,8 @@ import {
   Code,
   Collection,
   CollectionRow,
+  Equation,
+  Modal,
 } from "react-notion-x";
 import { getAllPagesInSpace } from "notion-utils";
 
@@ -82,6 +84,8 @@ const Blog: NextPage<BlogProps> = ({ blogRecordMap }) => {
           collection: Collection,
           collectionRow: CollectionRow,
           code: Code,
+          modal: Modal,
+          equation: Equation,
         }}
       />
     </Container>

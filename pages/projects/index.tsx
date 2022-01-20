@@ -10,6 +10,8 @@ import {
   Collection,
   CollectionRow,
   Code,
+  Equation,
+  Modal,
 } from "react-notion-x";
 
 interface ProjectsProps {
@@ -73,6 +75,8 @@ const Projects: NextPage<ProjectsProps> = ({ projectsRecordMap }) => {
           collection: Collection,
           collectionRow: CollectionRow,
           code: Code,
+          modal: Modal,
+          equation: Equation,
         }}
       />
     </Container>

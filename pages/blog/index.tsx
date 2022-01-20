@@ -1,5 +1,6 @@
 import { SyntheticEvent, CSSProperties } from "react";
 import React from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { GetStaticPropsResult, NextPage } from "next";
 import Container from "@components/Container";
@@ -10,6 +11,8 @@ import {
   Collection,
   CollectionRow,
   Code,
+  Equation,
+  Modal,
 } from "react-notion-x";
 
 interface BlogProps {
@@ -73,6 +76,8 @@ const Blog: NextPage<BlogProps> = ({ blogRecordMap }) => {
           collection: Collection,
           collectionRow: CollectionRow,
           code: Code,
+          modal: Modal,
+          equation: Equation,
         }}
       />
     </Container>

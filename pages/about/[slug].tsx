@@ -15,6 +15,8 @@ import {
   Code,
   Collection,
   CollectionRow,
+  Equation,
+  Modal,
 } from "react-notion-x";
 import { getPageInfo, Page, EXPERIENCES } from "../../lib/notion";
 
@@ -77,6 +79,8 @@ const About: NextPage<BlogProps> = ({ page, recordMap }) => (
         collection: Collection,
         collectionRow: CollectionRow,
         code: Code,
+        modal: Modal,
+        equation: Equation,
       }}
     />
   </Container>
