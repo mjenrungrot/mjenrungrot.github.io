@@ -94,7 +94,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
         gridTemplateColumns={["1fr", "1fr", "1fr 1fr 1fr"]}
         alignContent="center"
         justifyContent={["center", "center", "space-between"]}
-        margin="3rem 0"
+        margin="3rem auto"
       >
         <Container display={["none", "none", "flex"]}>
           <NavLink href="/">Teerapat Jenrungrot</NavLink>
