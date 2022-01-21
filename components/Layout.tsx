@@ -26,9 +26,13 @@ const Layout: React.FC<LayoutProps> = ({
         <meta name="author" content="Teerapat Jenrungrot" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Teerapat Jenrungrot" />
-        <meta property="og:description" content="Description" />
+        <meta
+          property="og:description"
+          content="Personal Website - Teerapat Jenrungrot"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="./blank.png" />
+        <meta property="og:image" content="/og_image.jpeg" />
+        <meta property="og:image:alt" content="Teerapat Jenrungrot" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
