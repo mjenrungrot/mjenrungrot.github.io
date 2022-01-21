@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({
           content="Personal Website - Teerapat Jenrungrot"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/og_image.png" />
+        <meta property="og:image" content="/og_image.jpeg" />
         <meta property="og:image:alt" content="Teerapat Jenrungrot" />
         <link
           rel="apple-touch-icon"
