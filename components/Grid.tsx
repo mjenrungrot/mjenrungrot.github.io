@@ -24,6 +24,7 @@ export type GridProps = GridGapProps &
   BordersProps;
 
 const Grid = styled.div<GridProps>`
+  margin: 0 auto;
   display: grid;
   align-items: center;
   justify-content: flex-end;
