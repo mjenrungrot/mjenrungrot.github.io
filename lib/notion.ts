@@ -34,6 +34,10 @@ export const EXPERIENCES = {
     date: "2020",
     uri: "flying-reading-83e/University-of-Washington-628515ddda324c3b84312253aa0ef0e5",
   },
+  google: {
+    date: "2022",
+    uri: "flying-reading-83e/Google-16fd99d312834634ac1b699958fdbc3b",
+  },
 };
 
 export interface PageInfo {
