@@ -9,6 +9,9 @@ const TransparentLink = styled.a<LayoutProps>`
   border-bottom: none;
   margin: 0;
   padding: 0;
+  &:hover {
+    background-color: #F0DEFD;
+  }
 
   ${compose(layout)}
 `;
