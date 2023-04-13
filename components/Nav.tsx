@@ -155,6 +155,8 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
                 Although I&apos;m not actively looking for full-time job
                 opportunities (still looking for internship, though), my inbox
                 is still open for you. Feel free to ask me anything!
+                
+                Email: tjenrung [at] cs.washington.edu
               </Text>
               <Grid
                 width="fit-content"
@@ -163,7 +165,7 @@ const Nav = ({ isOpen, onOpen, onClose }: NavProps): JSX.Element => {
                 justifyItems="center"
               >
                 <Link href="mailto:tjenrung[at]cs.washington.edu">
-                  <Button>Say Hello!</Button>
+                  <Button>Email me!</Button>
                 </Link>
                 <Button
                   variant="secondary"
